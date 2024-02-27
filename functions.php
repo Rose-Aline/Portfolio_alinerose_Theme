@@ -38,9 +38,16 @@ function register_my_menu(){
     register_nav_menus( array(
         'header-menu' => __( 'Menu De Tete'),
         'footer-menu'  => __( 'Menu De Pied'),
+        'footer-social' => __( 'Footer Social Menu'),
     ) );
 }
 add_action( 'init', 'register_my_menu', 0 );
 
+function theme_setup() {
+    add_theme_support('menus');
+    register_nav_menu('header-menu', 'Header Menu');
+}
+
+add_action('after_setup_theme', 'theme_setup');
 
 

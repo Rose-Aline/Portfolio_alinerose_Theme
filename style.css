@@ -18,30 +18,43 @@ GENERAL
 
  body {
      margin: 0;
+     padding-left: 5%;
      font-family: 'Roboto', sans-serif;
      font-size: 17px; 
      list-style: none;
-     background-color: #F3F3F3
+     background-color: #191114;
+     color:white
  }
 
     a{
     text-decoration: none;
-color:black}
+color:rgb(255, 255, 255)}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 400; 
+}
 
 
 h3 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
+    font-weight: 600; 
 }
 
 h2 {
-    font-family: 'Mohave', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 31px;
+    font-weight: 600; 
+
 }
 
 h1 {
-    font-family: 'Mohave', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 44px;
+    font-weight: 600; 
+
 }
 
 .marg {     
@@ -90,33 +103,33 @@ CSS HEADER
     align-items: center;
 }
 
-.social-icons .share {
+#vertical-header .social-icons .share {
     font-size: 30px;
     color: black;
     padding-bottom:15px;
 }
 
-.social-icons {
+#vertical-header .social-icons {
     padding-bottom:20px;
 }
 
-.menu-container {
+#vertical-header .menu-container {
     display: flex;
     align-items: center;
 }
 
-.menu-item {    
+#vertical-header .menu-item {    
     margin-top: 40px;
 }
 
-.menu-item a {
+#vertical-header .menu-item a {
     writing-mode: vertical-lr;
     text-orientation: mixed;
     white-space: nowrap;
     rotate: 180deg;
 }
     
-.main-menu a {
+#vertical-header .main-menu a {
     color: black !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -126,68 +139,84 @@ CSS HEADER
     box-sizing: border-box;
 }
 
-.main-menu a:active, .main-menu a:focus, .main-menu a:hover  {
+#vertical-header .main-menu a:active, #vertical-header .main-menu a:focus, #vertical-header .main-menu a:hover  {
     border-left-color: #FF2C2C;
 }
-
 
 
  /*
 FOOTER
 */
-footer {
-    display: flex;
+.black-background {
+    background-color: #030303;
     width: 100%;
+    padding: 8px 0;
 }
 
-.yellow-background {
-    padding:20px;
-    padding-right:60px;
-    padding-top:90px;
-    background-color: #FEC049;
-    flex: 3;
-    display: flex;
-    justify-content: flex-end; /* Aligner le contenu à droite */
-    align-items: flex-end; /* Aligner le contenu en bas */
-}
 
-.yellow-background a {
-    font-family: 'Mohave', sans-serif;
-    font-size: 30px;
-    color: black;
-    text-transform: uppercase; /* Mettre le texte en majuscules */
-}
-
-.transparent-background {
-    padding:20px;
-    background-color: transparent;
-    flex: 1;
-    border-top: 1px solid #000; /* Ajoute une bordure noire au-dessus de la section transparente */
-}
-
-.transparent-background nav {
-    list-style-type: none;
-    padding-left:40px
-
-}
-
-nav ul {
+.footer-menu nav ul,
+.footer-social-menu ul {
     list-style: none;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    margin: 0; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;     
+    padding-top:10px
 }
 
-nav h3 {
-    font-family: 'Mohave', sans-serif;
-    font-size: 25px;
-    margin: 10px 0; /* Ajustez la marge en haut et en bas */
+.footer-menu nav li,
+.footer-social-menu li{
+    display: inline;
+    margin-right: 18px;
 }
 
-.Img_logo {
-    padding-left:40px
+.title_footer {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    color:#FF3D00;
+}
 
-}     
+.title_portfolio_footer{
+padding-right:14px
+}
 
+.small_hr {
+    border: none;
+    background-color: white;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0; /* Position the HR to the left */
+}
+
+
+.footer-content-full {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;     
+
+}
+
+.Mentions_footer {
+    font-size: 14px;
+    padding-bottom: 5px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.footer-content{
+    padding-left: 5%
+}
+
+.footer-content-second{
+    padding-right:5%;    
+    text-align: right
+}
 
  /*
 EQUIPES

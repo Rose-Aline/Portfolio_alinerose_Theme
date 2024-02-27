@@ -10,27 +10,27 @@
 
 </head>
 <body>
-    <header id="vertical-header">
-        <div class="header-content">
-            <?php echo '<img src="http://localhost/portfolio_alinerose/wp-content/uploads/2024/02/logo_website_portfolio.png" alt="Logo_du_site" class="site-icon">' ?>
-            
-            <div class="menu-container">
-                <nav class="main-menu">
-                    <?php
-                        wp_nav_menu(array(
-                            'theme_location' => 'header-menu',
-                        ));
-                    ?>
-                </nav>
-            </div>
+        <header id="vertical-header" >
+            <div class="header-content">
+                <?php echo '<img src="http://localhost/portfolio_alinerose/wp-content/uploads/2024/02/logo_website_portfolio.png" alt="Logo_du_site" class="site-icon">' ?>
+                
+                <div class="menu-container">
+                    <nav class="main-menu">
+                        <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'header-menu',
+                            ));
+                        ?>
+                    </nav>
+                </div>
 
-            <div class="social-icons">
-                <i class="fab fa-brands fa-linkedin share"></i>
-                <i class="fab fa-behance-square share"></i>
-                <i class="fab fa-instagram-square share"></i>
+                <div class="social-icons">
+                    <i class="fab fa-brands fa-linkedin share"></i>
+                    <i class="fab fa-behance-square share"></i>
+                    <i class="fab fa-instagram-square share"></i>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
     <div id="main-content">
         <!-- Main content of your website goes here -->
     </div>

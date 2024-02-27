@@ -1,22 +1,47 @@
-      <footer>
-      <div class="transparent-background">
+<footer>
+    <div class="black-background">
+        <div class="footer-content-full">
         <!-- Contenu de la partie transparente du footer -->
-              <nav>
-                <h3>NAVIGATION</h3>
+        
+        <div class="footer-content">
+            <div class="footer-menu">
+
+            <div class="title_footer">
+                <h2 class="title_portfolio_footer">PORTFOLIO</h2>
+                <h5>ALINE ROSE</h5>
+                <hr class="small_hr">
+            </div>
+
+                
+                <nav>
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'footer-menu'
+                    ));
+                    ?>
+                </nav>
+            </div>
+            
+            <nav class="footer-social-menu">
                 <?php
-                wp_nav_menu ( array (
-                  'theme_location' => 'footer-menu'
-                ) ); ?>
-              </nav>
-    </div>
-    <div class="yellow-background">
-      <a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-      <img src="<?php echo esc_url('http://localhost/SAE303_hockey_cosom/wp-content/uploads/2023/11/logonoir.png'); ?>" class="Img_logo" alt="Rechercher">  
-    </div>
-
-    </footer>
+                $footer_social_menu = wp_nav_menu(array(
+                    'theme_location' => 'footer-social',
+                    'fallback_cb' => false,
+                    'echo' => false,
+                ));
+                if ($footer_social_menu) {
+                    echo $footer_social_menu;
+                } else {
+                    echo '<p>No items found in the Footer Social Menu.</p>';
+                }
+                ?>
+            </nav>
         </div>
-
-    <?php wp_footer(); ?>
-  </body>
-</html>
+        <div class="footer-content-second">
+            <p>alinerose262003@gmail.com</p>
+            <p>+06 51 91 06 03</a></p>
+        </div>
+     </div>
+        <p class="Mentions_footer">© 2024 Aline ROSE , Tous droits réservés.</p>
+    </div>
+</footer>

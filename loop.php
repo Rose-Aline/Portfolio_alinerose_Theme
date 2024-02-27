@@ -3,14 +3,14 @@
 <div class="joueurs-header">
     <div class="yellow-rectangle"></div>
     <img src="<?php echo esc_url('http://localhost/SAE303_hockey_cosom/wp-content/uploads/2023/11/header_principale.png'); ?>" alt="Header Image">
-    <h2>Tout ce que vous devez savoir sur le hockey cosom, réuni en un seul endroit.</h2>
+    <h2>Bonjour, je suis ALINE ROSE  étudiante en design graphique en MMI.</h2>
 </div>
 
 <div class="post-container">
     <div class="marg">
 
         <?php if (have_posts()) : ?>
-            <h2 class="title_BLACK">Découvrir les nouveautés</h2>
+            <h2>Découvrir les nouveautés</h2>
             <hr class="hr_equ_loop"/>
             <div class="post-grid">
                 <?php while (have_posts()) : the_post(); ?>
