@@ -7,7 +7,7 @@ Description: Le thème développer pour mon portfolio en ligne
 Version: 0.1
 Tags: Portfolio, Aline Rose, Web Developper, Web Designer, Designer, Design, Web
 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;800;900&display=swap');
 
 /* style.css */
 @import url('./src/styles.css');
@@ -32,7 +32,13 @@ color:rgb(255, 255, 255)}
 
 h5 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
+    font-weight: 400; 
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
     font-weight: 400; 
 }
 
@@ -57,15 +63,24 @@ h1 {
 
 }
 
-.marg {     
-    margin: 80px
+.button {
+    background-color: #FF3D00;
+    color: #FFFFFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    padding: 10px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
-.bigmarg {     
-    margin-left:120px;
-    margin-right:120px
-}
+.green{
+    color: #56B473;}
 
+.marg{
+    margin: 0 80px;
+}
 
  /*
 CSS HEADER
@@ -81,7 +96,12 @@ CSS HEADER
     z-index: 1000;
     padding-left:0px;
     margin-left:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
 }
+
 
 .header-content {
     display: flex;
@@ -116,10 +136,13 @@ CSS HEADER
 #vertical-header .menu-container {
     display: flex;
     align-items: center;
+    padding-right: 25px;
+
 }
 
 #vertical-header .menu-item {    
     margin-top: 40px;
+    
 }
 
 #vertical-header .menu-item a {
@@ -127,9 +150,11 @@ CSS HEADER
     text-orientation: mixed;
     white-space: nowrap;
     rotate: 180deg;
+    
 }
     
 #vertical-header .main-menu a {
+
     color: black !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -291,11 +316,6 @@ JOUEURS
     object-fit:cover
 }
 
-.yellow-rectangle {
-    width: 10%;
-    height: 10px; /* Hauteur du rectangle jaune */
-    background-color: #FEC049;
-}
 
 .joueurs-header h2, .yellow-rectangle {
     position: absolute;
@@ -484,29 +504,39 @@ LOOP
 */
 
 
-.post-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes de largeur égale */
-    gap: 20px; /* Espacement entre les publications */
-    color:white;
+.video-container {
+    max-width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin: 30px auto;
+    border-radius: 50px;
+    position: relative;
 }
 
-.post a{
-    background-size: cover;
-    color: white;
+.video-container video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
 }
 
-
-
-.hr_equ_loop {
-    width: 60%;
-    margin: 0;
-    margin-bottom:50px
+.video-container-small {
+    width: 50%;
+    height: 190px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+    border-radius: 0 50px 50px 0;
+    margin-left: -80px;
 }
 
-
-.title_BLACK{
-    color:black
+.video-container-small video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -23%);
 }
-
-
