@@ -12,16 +12,56 @@
         </div>
 
             <h4>Bonjour, je suis <span class="green"><b>ALINE ROSE</b></span>  étudiante en design graphique en MMI.</h4>
+            <hr class="principale_hr">
 
-        <div class="video-container-small">
-            <video autoplay muted loop>
-                <source src="<?php echo $video_url; ?>" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="wrapper">
+    <div class="video-container-small">
+        <video autoplay muted loop>
+            <source src="<?php echo $video_url; ?>" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="container-title-section">
+        <h5>Créatrice spécialisée dans le <span class="green">design graphique et la création de sites web</span>, je vous invite à découvrir mon portfolio pour explorer en détail mon travail ainsi que mes collaborations.</h5>
+        <button class="button">DÉCOUVRIR MON PROFIL</button>
+    </div>
+</div>
+
+<div class="white-section">
+    <div class="section_competences">
+    <img class="profile-image" src="http://localhost/portfolio_alinerose/wp-content/uploads/2024/03/alinerose_img.png" alt="Aline_Rose_portrait">
+          
+        <div class="competences">
+            <h3 class="competences-title">MES COMPÉTENCES</h3>
+
+            <div class="rounded-rectangle">
+                <div class="outlined-word-orange">DESIGN GRAPHIQUE</div>
+                <div class="outlined-word">LOGO</div>
+                <div class="outlined-word">ILLUSTRATION</div>
+                <div class="outlined-word">ANIMATION</div>
+                <div class="outlined-word">MAQUETTAGE</div>
+            </div>
+
+            <div class="rounded-rectangle">
+                <div class="outlined-word-orange">DÉVELOPPEMENT</div>
+                <div class="outlined-word">WORDPRESS</div>
+                <div class="outlined-word">HTML / CSS</div>
+                <div class="outlined-word">VISUAL STUDIO CODE</div>
+                <div class="outlined-word">TAILWIND / BOOTSTRAP</div>
+            </div>
+
+            <div class="rounded-rectangle">
+                <div class="outlined-word-orange">COMMUNICATION</div>
+                <div class="outlined-word">ADOBE PHOTOSHOP</div>
+                <div class="outlined-word">MONTAGE VIDÉO</div>
+                <div class="outlined-word">RÉSEAUX SOCIAUX</div>
+                <div class="outlined-word">RÉFÉRENCEMENT</div>
+            </div>
         </div>
 
-            <h5>Créatrice spécialisée dans le <span class="green">design graphique et la création de sites web</span>, je vous invite à découvrir mon portfolio pour explorer en détail mon travail ainsi que mes collaborations.</h5>
-            <button class="button">DÉCOUVRIR MON PROFIL</button>
+    </div>
+</div>
 
         <div class="post-container">
             <div class="marg">
