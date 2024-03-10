@@ -617,3 +617,112 @@ LOOP
     object-fit: cover; /* Crop the image */
     margin-bottom: -20px; /* Adjust as needed */
 }
+
+
+ /*
+Projet
+*/
+
+ /*Projet - Section main*/
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    flex: 0 0 40%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-item_image {
+    flex: 0 0 60%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projet-title {
+    text-transform: uppercase;
+    background-color: #242424;
+    padding: 20px 60px; 
+    color: white;
+    margin: 0;
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px;
+    
+}
+
+.projet-content {
+    background-color: #F8F8F8;
+    padding: 10px 60px 60px; 
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px; 
+    font-size: 16px;
+}
+
+.projet-content em {
+    color: #FF0000;
+    font-style: normal;
+}
+
+.custom-image 
+{
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    margin: 30px 0;
+
+}
+
+ /*Projet - Section second*/
+
+ .linked-images {
+    margin: 40px 0 80px 0;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    width: 100%;
+}
+
+.linked-image-top {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    transform: rotate(-15deg); /* Faire tourner l'image de 20 degrés */
+    
+}
+.linked-image-top img {
+    width: 90%; /* Reduire la largeur de l'image à 90% */
+}
+
+.linked-images-inner img{
+    height: 90%;
+}
+
+.phone-image {
+    height: 90%; /* Set height to 100% */
+    width:auto;
+    margin-bottom:20px
+}
+
+.flex-item_2_projet {
+    position: relative; 
+}
+.linked-images-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px   ;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    width: 90%;
+ }
+
+ .linked-image img {
+    border-radius: 30px; /* Arrondir les coins avec un rayon de 30px */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Ajouter une ombre légèrement plus foncée */
+ }

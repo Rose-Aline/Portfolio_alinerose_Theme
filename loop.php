@@ -63,26 +63,42 @@
     </div>
 </div>
 
-        <div class="post-container">
-            <div class="marg">
 
-                <?php if (have_posts()) : ?>
-                    <h2>Découvrir les nouveautés</h2>
-                    <hr class="hr_equ_loop"/>
-                    <div class="post-grid">
-                        <?php while (have_posts()) : the_post(); ?>
-                            <article class="post" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>');">
-                                <div class="post-content">
-                                    <h4 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                                    <p class="post-date">Publié le <?php the_date(); ?></p>
-                                </div>
-                            </article>
-                        <?php endwhile; ?>
-                    </div>
-                <?php else : ?>
-                    <p class="nothing">Il n'y a pas de Post à afficher !</p>
-                <?php endif; ?>
-            </div>
-            </div>
-         </div>
+
+<div class="white-section">      
+    <div class="competences">
+      <h3 class="competences-title">PROJETS RÉCENTS</h3>
+        <p>Mes projets allient design graphique et création web. Découvrez mon portfolio pour explorer mon univers créatif.</p>
+    </div>
+</div>
+
+
+        <div class="post-grid">
+            <?php
+            // Query to retrieve the 6 most recent pages
+            $args = array(
+                'post_type' => 'page',
+                'posts_per_page' => 6, // Number of pages to display
+                'order' => 'DESC', // Sort pages in descending order
+                'orderby' => 'date' // Order pages by date
+            );
+
+            $recent_pages = new WP_Query($args);
+
+            if ($recent_pages->have_posts()) :
+                while ($recent_pages->have_posts()) : $recent_pages->the_post(); ?>
+                    <article class="post" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>');">
+                        <div class="post-content">
+                            <h4 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                        </div>
+                    </article>
+                <?php endwhile;
+                wp_reset_postdata(); 
+            else : ?>
+                <p class="nothing">Il n'y a pas de Post à afficher !</p>
+            <?php endif; ?>
+        </div>
+        </div>
+
+         
 <?php get_footer(); ?>

@@ -1,21 +1,22 @@
 <?php
 function init_my_custom()
 {
+    // Register the custom post type "Projets"
     register_post_type(
-        'equipes',
+        'projets',
         array(
-            'label' => 'equipes',
+            'label' => 'Projets',
             'labels' => array(
-                'name' => 'Equipes',
-                'singular_name' => 'Equipes',
-                'all_items' => 'Toutes les Equipes',
-                'add_new_item' => 'Ajouter une Equipe',
-                'edit_item' => 'Éditer une équipe',
-                'new_item' => 'Nouvelle équipe',
-                'view_item' => 'Voir les équipes',
-                'search_items' => 'Rechercher parmi les équipes',
-                'not_found' => 'Aucune équipe trouvée',
-                'not_found_in_trash' => 'Aucune équipe dans la corbeille'
+                'name' => 'Projets',
+                'singular_name' => 'Projet',
+                'all_items' => 'Tous les Projets',
+                'add_new_item' => 'Ajouter un Projet',
+                'edit_item' => 'Éditer un projet',
+                'new_item' => 'Nouveau projet',
+                'view_item' => 'Voir les projets',
+                'search_items' => 'Rechercher parmi les projets',
+                'not_found' => 'Aucun projet trouvé',
+                'not_found_in_trash' => 'Aucun projet dans la corbeille'
             ),
             'public' => true,
             'capability_type' => 'post',
@@ -30,13 +31,13 @@ function init_my_custom()
 }
 add_action('init', 'init_my_custom');
 
-// vignettes
+// Add support for post thumbnails
 add_theme_support( 'post-thumbnails' );
 
-//ajouter une nouvelle zone de menu à mon thème
+// Register navigation menus
 function register_my_menu(){
     register_nav_menus( array(
-        'header-menu' => __( 'Menu De Tete'),
+        'header-menu' => __( 'Menu De Tête'),
         'footer-menu'  => __( 'Menu De Pied'),
         'footer-social' => __( 'Footer Social Menu'),
     ) );
@@ -49,5 +50,3 @@ function theme_setup() {
 }
 
 add_action('after_setup_theme', 'theme_setup');
-
-
