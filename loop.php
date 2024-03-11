@@ -72,39 +72,46 @@
         <h6>Mes projets allient design graphique et création web. Découvrez mon portfolio pour explorer mon univers créatif.</h6>
    
    
-                <div class="post-grid">
-                    <?php
-                    // Query to retrieve the 6 most recent pages
-                    $args = array(
-                        'post_type' => 'page',
-                        'posts_per_page' => 6, // Number of pages to display
-                        'order' => 'DESC', // Sort pages in descending order
-                        'orderby' => 'date' // Order pages by date
-                    );
+        <div class="post-grid">
+    <?php
+    // Query to retrieve the 6 most recent pages using 'projet.php' template
+    $args = array(
+        'post_type'      => 'page',
+        'posts_per_page' => 6, // Number of pages to display
+        'order'          => 'DESC', // Sort pages in descending order
+        'orderby'        => 'date', // Order pages by date
+        'meta_query'     => array(
+            array(
+                'key'   => '_wp_page_template',
+                'value' => 'projet.php', // Template name to filter by
+            ),
+        ),
+    );
 
-                    $recent_pages = new WP_Query($args);
+    $recent_pages = new WP_Query($args);
 
-                    if ($recent_pages->have_posts()) :
-                        $post_count = 0;
-                        while ($recent_pages->have_posts()) : $recent_pages->the_post();
-                            $post_count++;
+    if ($recent_pages->have_posts()) :
+        $post_count = 0;
+        while ($recent_pages->have_posts()) : $recent_pages->the_post();
+            $post_count++;
 
-                            // Add a class for the first three posts
-                            $post_class = ($post_count <= 3) ? 'top-row' : 'bottom-row';
-                            ?>
-                            <article class="post <?php echo $post_class; ?>">
-                            <a href="<?php the_permalink(); ?>"><div class="post-image" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>');"></div>
-                                <div class="post-content"></a>
-                                </div>
-                            </article>
-                        <?php endwhile;
-                        wp_reset_postdata();
-                    else : ?>
-                        <p class="nothing">Il n'y a pas de Post à afficher !</p>
-                    <?php endif; ?>
-                    <button class="button button_portfolio">PORTFOLIO<i class="fas fa-long-arrow-alt-right"></i> </button>
+            // Add a class for the first three posts
+            $post_class = ($post_count <= 3) ? 'top-row' : 'bottom-row';
+            ?>
+            <article class="post <?php echo $post_class; ?>">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="post-image" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>');"></div>
+                    <div class="post-content"></div>
+                </a>
+            </article>
+        <?php endwhile;
+        wp_reset_postdata();
+    else : ?>
+        <p class="nothing">Il n'y a pas de Post à afficher !</p>
+    <?php endif; ?>
+    <button class="button button_portfolio">PORTFOLIO<i class="fas fa-long-arrow-alt-right"></i> </button>
+</div>
 
-                </div>
             </div>
         </div>
 
