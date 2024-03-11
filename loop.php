@@ -23,7 +23,7 @@
     </div>
 
     <div class="container-title-section">
-        <h5>Créatrice spécialisée dans le <span class="green">design graphique et la création de sites web</span>, je vous invite à découvrir mon portfolio pour explorer en détail mon travail ainsi que mes collaborations.</h5>
+        <h5>Créatrice spécialisée dans le <span class="green">design graphique et la création de sites web</span>, je vous invite à découvrir mon portfolio pour explorer en détail mon travail ainsi que mon parcours.</h5>
         <button class="button">DÉCOUVRIR MON PROFIL</button>
     </div>
 </div>
@@ -44,6 +44,14 @@
             </div>
 
             <div class="rounded-rectangle">
+                <div class="outlined-word-orange">COMMUNICATION</div>
+                <div class="outlined-word">ADOBE PHOTOSHOP</div>
+                <div class="outlined-word">MONTAGE VIDÉO</div>
+                <div class="outlined-word">RÉSEAUX SOCIAUX</div>
+                <div class="outlined-word">RÉFÉRENCEMENT</div>
+            </div>
+
+            <div class="rounded-rectangle">
                 <div class="outlined-word-orange">DÉVELOPPEMENT</div>
                 <div class="outlined-word">WORDPRESS</div>
                 <div class="outlined-word">HTML / CSS</div>
@@ -51,13 +59,6 @@
                 <div class="outlined-word">TAILWIND / BOOTSTRAP</div>
             </div>
 
-            <div class="rounded-rectangle">
-                <div class="outlined-word-orange">COMMUNICATION</div>
-                <div class="outlined-word">ADOBE PHOTOSHOP</div>
-                <div class="outlined-word">MONTAGE VIDÉO</div>
-                <div class="outlined-word">RÉSEAUX SOCIAUX</div>
-                <div class="outlined-word">RÉFÉRENCEMENT</div>
-            </div>
         </div>
 
     </div>
@@ -68,37 +69,66 @@
 <div class="white-section">      
     <div class="competences">
       <h3 class="competences-title">PROJETS RÉCENTS</h3>
-        <p>Mes projets allient design graphique et création web. Découvrez mon portfolio pour explorer mon univers créatif.</p>
+        <h6>Mes projets allient design graphique et création web. Découvrez mon portfolio pour explorer mon univers créatif.</h6>
+   
+   
+                <div class="post-grid">
+                    <?php
+                    // Query to retrieve the 6 most recent pages
+                    $args = array(
+                        'post_type' => 'page',
+                        'posts_per_page' => 6, // Number of pages to display
+                        'order' => 'DESC', // Sort pages in descending order
+                        'orderby' => 'date' // Order pages by date
+                    );
+
+                    $recent_pages = new WP_Query($args);
+
+                    if ($recent_pages->have_posts()) :
+                        $post_count = 0;
+                        while ($recent_pages->have_posts()) : $recent_pages->the_post();
+                            $post_count++;
+
+                            // Add a class for the first three posts
+                            $post_class = ($post_count <= 3) ? 'top-row' : 'bottom-row';
+                            ?>
+                            <article class="post <?php echo $post_class; ?>">
+                            <a href="<?php the_permalink(); ?>"><div class="post-image" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>');"></div>
+                                <div class="post-content"></a>
+                                </div>
+                            </article>
+                        <?php endwhile;
+                        wp_reset_postdata();
+                    else : ?>
+                        <p class="nothing">Il n'y a pas de Post à afficher !</p>
+                    <?php endif; ?>
+                    <button class="button button_portfolio">PORTFOLIO<i class="fas fa-long-arrow-alt-right"></i> </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="main_section_last">
+    <div class="flex-item_1">
+        <div class="footer_video">
+            <video autoplay muted loop>
+                <source src="<?php echo $video_url; ?>" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="flex-item_2">
+        <h1>MERCI DE </h1>
+        <h1>VOTRE VISITE</h1>
+        <button class="button">ME CONTACTER</button>
     </div>
 </div>
 
 
-        <div class="post-grid">
-            <?php
-            // Query to retrieve the 6 most recent pages
-            $args = array(
-                'post_type' => 'page',
-                'posts_per_page' => 6, // Number of pages to display
-                'order' => 'DESC', // Sort pages in descending order
-                'orderby' => 'date' // Order pages by date
-            );
+    
+</div>
 
-            $recent_pages = new WP_Query($args);
 
-            if ($recent_pages->have_posts()) :
-                while ($recent_pages->have_posts()) : $recent_pages->the_post(); ?>
-                    <article class="post" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>');">
-                        <div class="post-content">
-                            <h4 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                        </div>
-                    </article>
-                <?php endwhile;
-                wp_reset_postdata(); 
-            else : ?>
-                <p class="nothing">Il n'y a pas de Post à afficher !</p>
-            <?php endif; ?>
-        </div>
-        </div>
 
          
 <?php get_footer(); ?>

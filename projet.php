@@ -12,7 +12,11 @@ get_header(); ?>
         ?>
         <div class="flex-container">
             <div class="flex-item">
-                <h2 class="projet-title"><?php echo get_the_title(); ?></h2>
+                <div class="projet-title">
+                <h2 class="projet_title_h2"><?php echo get_the_title(); ?></h2>
+                <h6 class="release-date">Publié le <?php the_date(); ?></h6>
+                </div>
+
                 <div class="projet-content">
                     <?php the_content(); ?>
                 </div>

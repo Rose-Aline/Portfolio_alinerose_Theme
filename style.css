@@ -7,7 +7,7 @@ Description: Le thème développer pour mon portfolio en ligne
 Version: 0.1
 Tags: Portfolio, Aline Rose, Web Developper, Web Designer, Designer, Design, Web
 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 /* style.css */
 @import url('./src/styles.css');
@@ -35,6 +35,13 @@ GENERAL
     a{
     text-decoration: none;
 color:rgb(255, 255, 255)}
+
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500; 
+    margin:10px 0
+}
 
 h5 {
     font-family: 'Montserrat', sans-serif;
@@ -619,8 +626,87 @@ LOOP
 }
 
 
+ /*Loop - Projets récents*/
+
+ .post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; 
+    padding-top:15px;
+    padding-bottom:65px
+
+}
+
+.post {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-image {
+    height: 250px; 
+}
+
+.top-row {
+    grid-row: 1;
+}
+
+.bottom-row {
+    grid-row: 2;
+}
+
+.button_portfolio {
+    padding: 10px 100px;
+    position: relative;
+
+}
+
+.button_portfolio i {
+    position: absolute;
+    color: white;
+    padding-left: 40px;
+    font-size: 20px; /* Adjust the font size to make the arrow bigger */
+}
+
+
+ /*Loop - Merci de votre visite*/
+
+
+.main_section_last {
+    display: flex;
+}
+
+.flex-item_1 {
+    flex: 60%;
+}
+
+.flex-item_2 {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    width:40%
+}
+
+.flex-item_2 h1 {
+    margin:0;
+}
+
+.footer_video video{
+    width: 100%;
+    margin-left: -80px; 
+}
+
+
+.flex-item_2 .button {
+    width: 70%;
+    margin-top:60px
+}
+
+
+
  /*
-Projet
+PROJET
 */
 
  /*Projet - Section main*/
@@ -648,6 +734,7 @@ Projet
     text-transform: uppercase;
     background-color: #242424;
     padding: 20px 60px; 
+    width:400px;
     color: white;
     margin: 0;
     border-top-left-radius: 20px; 
@@ -658,6 +745,7 @@ Projet
 .projet-content {
     background-color: #F8F8F8;
     padding: 10px 60px 60px; 
+    width:400px;
     border-bottom-left-radius: 20px; 
     border-bottom-right-radius: 20px; 
     font-size: 16px;
@@ -725,4 +813,12 @@ Projet
  .linked-image img {
     border-radius: 30px; /* Arrondir les coins avec un rayon de 30px */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Ajouter une ombre légèrement plus foncée */
+    
+ }
+
+ .projet_title_h2, .release-date{
+    margin:5px
+ }
+ .release-date{
+    font-weight: 400;
  }
