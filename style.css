@@ -114,8 +114,8 @@ CSS HEADER
     margin-left:0px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -229,7 +229,7 @@ padding-right:14px
     height: 1px;
     width: 100%;
     position: absolute;
-    left: 0; /* Position the HR to the left */
+    left: 0;
 }
 
 
@@ -309,7 +309,7 @@ LOOP
 
 .video-container-small {
     width: 50%;
-    height: 190px; /* Adjust height as needed */
+    height: 190px; 
     overflow: hidden;
     position: relative;
     border-radius: 0 50px 50px 0;
@@ -388,10 +388,10 @@ LOOP
 }
 
 .profile-image {
-    width: 323px; /* Set the width */
-    height: 392px; /* Set the height */
-    object-fit: cover; /* Crop the image */
-    margin-bottom: -20px; /* Adjust as needed */
+    width: 323px;
+    height: 392px; 
+    object-fit: cover; 
+    margin-bottom: -20px;
 }
 
 
@@ -435,7 +435,7 @@ LOOP
     position: absolute;
     color: white;
     padding-left: 40px;
-    font-size: 20px; /* Adjust the font size to make the arrow bigger */
+    font-size: 20px; 
 }
 
 
@@ -601,5 +601,41 @@ PROJET LISTE
 }
 
 .white-section .custom-font-size {
+    font-size: 19px;
+}
+/* Custom CSS for the page liste_projet.php */
+.white-section .post-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.white-section .post-grid .post {
+    width: calc(33.33% - 20px); /* Adjust the width and margin values as needed */
+    box-sizing: border-box;
+    margin-top:30px
+}
+
+
+.white-section .post-grid .post .post-content {
+    margin-top: 10px; /* Adjust the top margin as needed */
+}
+
+.white-section .post-grid .post .post-release-date {
+    margin: 5px; /* Remove the bottom margin */
+}
+
+
+.portfolio-title {
+    margin: 0;
+}
+
+.portfolio-subtitle {
+    margin: 0;
     font-size: 20px;
+    font-weight: 300;
+}
+
+.portfolio-header{
+    margin: 40px;
 }

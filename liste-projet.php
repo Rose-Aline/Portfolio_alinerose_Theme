@@ -4,8 +4,13 @@ Template Name: Page List with Portfolio Work Template
 */
 get_header();
 ?>
+    <main class="marg">
 
-<main class="marg">
+    <div class="portfolio-header">
+        <h1 class="portfolio-title">PORTFOLIO</h1>
+        <h4 class="portfolio-subtitle">Découvrir mes réalisations</h4>
+    </div>
+
     <div class="white-section">
         <div class="post-grid">
             <?php
