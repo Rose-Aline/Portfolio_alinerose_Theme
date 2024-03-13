@@ -32,6 +32,11 @@ GENERAL
     margin:0 -80px;
     padding:0 80px}
 
+    .white-section-2 {
+        background-color: #E3DED3;
+        color: #000;
+    }
+
     a{
     text-decoration: none;
 color:rgb(255, 255, 255)}
@@ -603,7 +608,7 @@ PROJET LISTE
 .white-section .custom-font-size {
     font-size: 19px;
 }
-/* Custom CSS for the page liste_projet.php */
+
 .white-section .post-grid {
     display: flex;
     flex-wrap: wrap;
@@ -611,18 +616,18 @@ PROJET LISTE
 }
 
 .white-section .post-grid .post {
-    width: calc(33.33% - 20px); /* Adjust the width and margin values as needed */
+    width: calc(33.33% - 20px); 
     box-sizing: border-box;
     margin-top:30px
 }
 
 
 .white-section .post-grid .post .post-content {
-    margin-top: 10px; /* Adjust the top margin as needed */
+    margin-top: 10px; 
 }
 
 .white-section .post-grid .post .post-release-date {
-    margin: 5px; /* Remove the bottom margin */
+    margin: 5px; 
 }
 
 
@@ -638,4 +643,98 @@ PROJET LISTE
 
 .portfolio-header{
     margin: 40px;
+}
+
+
+
+/*
+CONTACT
+*/
+
+.contact-container {
+    display: flex;
+}
+
+.left-section {
+    width: 30%;
+    margin-bottom:40px
+}
+
+.right-section {
+    width: 70%;
+    padding: 30px 80px;
+}
+
+.contact-container .left-section img {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover;
+    display: block; 
+    margin: 0 auto; 
+}
+
+.text-content-left-section{
+margin-left:40px}
+
+.no-padding {
+    margin: 0; 
+}
+
+.contact-container a {
+    color: #0FA0F1;
+    text-decoration: underline; 
+}
+
+.contact-container a:hover {
+    color: #56B473; 
+    text-decoration: underline;
+}
+
+.text-content-left-section p {
+    margin: 10px; 
+}
+
+.text-content-left-section h2 {
+    margin: 10px; 
+    font-size: 26px;
+    margin-top:30px
+}
+
+/* 7Form */
+
+.wpcf7 input, .wpcf7 textarea {
+    margin: 5px 0;
+}
+
+.wpcf7 input, .wpcf7 textarea, .wpcf7 select {
+    border: none;
+    border-radius: 0; 
+    background-color: #FFFCF5;
+    width:80%;
+    height:40px;
+    border-radius: 10px; 
+
+}
+
+.wpcf7 textarea {
+    height: 180px;
+    resize: none;
+}
+
+.wpcf7 input[type="submit"] {
+    background-color: #FF3D00;
+    color: #FFFFFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    width:30%;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.form_title {
+    font-weight: 800;
+    font-size:35px
+
 }
