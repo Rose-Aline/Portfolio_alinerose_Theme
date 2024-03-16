@@ -12,7 +12,9 @@
 <body>
         <header id="vertical-header" >
             <div class="header-content">
-                <?php echo '<img src="http://localhost/portfolio_alinerose/wp-content/uploads/2024/02/logo_website_portfolio.png" alt="Logo_du_site" class="site-icon">' ?>
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="logo-link">
+                <img src="http://localhost/portfolio_alinerose/wp-content/uploads/2024/02/logo_website_portfolio.png" alt="Logo_du_site" class="site-icon">
+            </a>
                 
                 <div class="menu-container">
                     <nav class="main-menu">
@@ -25,9 +27,9 @@
                 </div>
 
                 <div class="social-icons">
-                    <i class="fab fa-brands fa-linkedin share"></i>
-                    <i class="fab fa-behance-square share"></i>
-                    <i class="fab fa-instagram-square share"></i>
+            <a href="https://www.linkedin.com/in/aline-rose-1b0ab7258/" target="_blank"><i class="fab fa-brands fa-linkedin share"></i></a>
+            <a href="https://www.behance.net/alinerose" target="_blank"><i class="fab fa-behance-square share"></i></a>
+            <a href="https://www.instagram.com/alinerose.design/" target="_blank"><i class="fab fa-instagram-square share"></i></a>
                 </div>
             </div>
         </header>

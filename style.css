@@ -738,3 +738,37 @@ margin-left:40px}
     font-size:35px
 
 }
+/* A propos */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-section-about {
+    flex: 40%;
+    position: relative; /* Add relative positioning */
+}
+
+.right-section-about {
+    flex: 60%;
+}
+
+.left-section-about .image-container {
+    position: relative;
+}
+
+.left-section-about img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.button-container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    bottom: -20px; /* Adjust as needed */
+    gap: 20px;
+}
