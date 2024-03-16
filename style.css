@@ -738,7 +738,11 @@ margin-left:40px}
     font-size:35px
 
 }
-/* A propos */
+/* 
+A PROPOS
+ */
+
+
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -746,11 +750,13 @@ margin-left:40px}
 
 .left-section-about {
     flex: 40%;
-    position: relative; /* Add relative positioning */
+    position: relative;
+    background-color: #242424;
 }
 
 .right-section-about {
     flex: 60%;
+    margin:60px 60px 
 }
 
 .left-section-about .image-container {
@@ -771,4 +777,142 @@ margin-left:40px}
     justify-content: center; /* Center the buttons horizontally */
     bottom: -20px; /* Adjust as needed */
     gap: 20px;
+}
+
+/* Timeline */
+.timeline{
+ margin:60px 30px
+}
+
+.timeline-point {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.timeline-point .point {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 25px); /* Adjust the position vertically */
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+
+.timeline-point:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: calc(50% + -10px); /* Position the line */
+    width: 1px;
+    height: calc(100%); /* Height of the line */
+    background-color: #fff; /* Color of the line */
+}
+
+.timeline-point h3 {
+    color: #FF3D00;
+}
+
+.timeline-point p {
+    margin: 0;
+    padding: 0;
+    font-size:15px
+}
+
+.timeline h2 {
+    font-weight: 300;
+}
+
+.button-small {
+    padding: 10px;
+    width: 220px
+}
+
+.about_title{
+    font-size: 40px;
+    font-weight: 600;
+    margin:0
+}
+
+/* Right side */
+.right-section-about h3 {
+    font-size: 25px;
+    font-weight: 300;
+    margin:0
+}   
+
+.about_hr {
+    margin:20px 0
+}
+
+.about_description {
+    width: 70%;
+    font-weight: 300;
+    margin-bottom:60px
+
+}   
+
+.container {
+    justify-content: space-between;
+    width: 80%;
+}
+
+/* rectangle */
+
+.rectangle {
+    width: 95%;
+    background-color: #E3DED3;
+    padding: 10px 20px;
+    margin-top: 20px; 
+    color: #000;
+}
+
+.rectangles-container h1 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.rectangles-container p {
+    font-size: 14px;
+}
+
+.number {
+    color: #FF3D00; /* Set the color to FF3D00 */
+    margin-right: 5px; /* Add a right margin for spacing */
+}
+
+.about_portfolio {
+    margin: 0 80px;
+    padding-top:40px
+}
+
+.contact-container {
+    display: flex;
+    background-color: #242424;
+}
+
+.left-section-about {
+    flex: 1;
+    padding: 20px;
+}
+
+.right-section-about {
+    flex: 1;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.right-content {
+    text-align: center;
+}
+
+.about-contact-title{
+        font-size: 40px;
+    font-weight: 600;
+
 }
