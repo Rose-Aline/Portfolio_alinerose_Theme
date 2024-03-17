@@ -779,7 +779,7 @@ A PROPOS
     gap: 20px;
 }
 
-/* Timeline */
+/*a propos - Timeline */
 .timeline{
  margin:60px 30px
 }
@@ -839,7 +839,7 @@ A PROPOS
     margin:0
 }
 
-/* Right side */
+/*a propos - Right side */
 .right-section-about h3 {
     font-size: 25px;
     font-weight: 300;
@@ -862,7 +862,7 @@ A PROPOS
     width: 80%;
 }
 
-/* rectangle */
+/*a propos - rectangle */
 
 .rectangle {
     width: 95%;
@@ -886,33 +886,40 @@ A PROPOS
     margin-right: 5px; /* Add a right margin for spacing */
 }
 
+/* a propos - portfolio */
 .about_portfolio {
     margin: 0 80px;
     padding-top:40px
 }
 
-.contact-container {
-    display: flex;
-    background-color: #242424;
-}
+/* a propos - contact */
 
-.left-section-about {
-    flex: 1;
-    padding: 20px;
-}
 
-.right-section-about {
-    flex: 1;
-    color: #ffffff;
-    padding: 20px;
-}
 
 .right-content {
     text-align: center;
 }
 
-.about-contact-title{
-        font-size: 40px;
-    font-weight: 600;
 
+.contact-container-about {
+    background-color: #242424;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+}
+
+.right-section-about-2 {
+    flex: 0 0 55%; /* This will make it take 60% of the container width */
+}
+
+.left-section-about-2 {
+    padding-right: 150px ;
+}
+
+
+
+.about-contact-title {
+    font-size: 40px;
+    font-weight: 600;
 }

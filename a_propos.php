@@ -120,19 +120,22 @@ get_header();
             </div>
         </div>
         
-        <div class="contact-container">
-    <div class="right-section-about">
+
+        <div class="contact-container contact-container-about">
+    <div class="right-section-about-2">
         <div class="right-content">
             <h1 class="about-contact-title">VOUS SOUHAITEZ M’ENVOYEZ UN MESSAGE ?</h1>
             <button class="button">Contactez moi !</button>
         </div>
     </div>
-    <div class="left-section-about">
+    <div class="left-section-about-2">
         <h2>Mes contacts</h2>
         <p><a href="mailto:alinerose262003@gmail.com"><i class="fa fa-envelope"></i> alinerose262003@gmail.com</a></p>
         <p><i class="fa fa-phone"></i> +06 51 91 06 03</p>
     </div>
 </div>
+
+
 
 
 <main class="marg">
