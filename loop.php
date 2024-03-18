@@ -115,6 +115,27 @@
             </div>
         </div>
 
+<div class="cards-colors">
+        <h1>CRÉEZ UNE IDENTITÉ QUI VOUS CORRESPOND</h1>
+    <p>Cliquez et faites glisser une carte pour découvrir ce que vous réserve aujourd'hui.</p>
+
+    <div class="custom-white-section" id="customWhiteSection">
+        <div class="custom-draggable-card" id="customDraggableCard1">Organisation</div>
+        <div class="custom-draggable-card" id="customDraggableCard2">Curiosité</div>
+        <div class="custom-draggable-card" id="customDraggableCard3">Esprit d’équipe</div>
+        <div class="custom-draggable-card" id="customDraggableCard4">Autonomie</div>
+        <div class="custom-draggable-card" id="customDraggableCard5">Flexibilité</div>
+        <div class="custom-draggable-card" id="customDraggableCard6">Communication</div>
+        <div class="custom-draggable-card" id="customDraggableCard7">Positivité</div>
+        <div class="custom-draggable-card" id="customDraggableCard8">Créativité</div>
+        <div class="custom-draggable-card" id="customDraggableCard9">Ouverture d’esprit</div>
+        <div class="custom-draggable-card" id="customDraggableCard10">Efficacité</div>
+    </div>
+</div>
+
+
+
+
         <div class="main_section_last">
     <div class="flex-item_1">
         <div class="footer_video">
@@ -135,7 +156,106 @@
     
 </div>
 
-
-
-         
 <?php get_footer(); ?>
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const customDraggableCards = document.querySelectorAll(".custom-draggable-card");
+        const customWhiteSection = document.getElementById("customWhiteSection");
+        const cardsColors = document.querySelector(".cards-colors"); // Select the element with class "cards-colors"
+
+        customDraggableCards.forEach(function (customDraggableCard, index) {
+            customDraggableCard.addEventListener("mousedown", function (e) {
+                e.preventDefault();
+
+                let offsetX = e.clientX - customDraggableCard.getBoundingClientRect().left;
+                let offsetY = e.clientY - customDraggableCard.getBoundingClientRect().top;
+
+                document.addEventListener("mousemove", dragElement);
+                document.addEventListener("mouseup", () => {
+                    document.removeEventListener("mousemove", dragElement);
+                });
+
+                function dragElement(e) {
+                    e.preventDefault();
+
+                    let maxX = customWhiteSection.offsetWidth - customDraggableCard.offsetWidth;
+                    let maxY = customWhiteSection.offsetHeight - customDraggableCard.offsetHeight;
+
+                    let x = e.clientX - offsetX - customWhiteSection.getBoundingClientRect().left;
+                    let y = e.clientY - offsetY - customWhiteSection.getBoundingClientRect().top;
+
+                    x = Math.min(Math.max(x, 0), maxX);
+                    y = Math.min(Math.max(y, 0), maxY);
+
+                    customDraggableCard.style.left = x + "px";
+                    customDraggableCard.style.top = y + "px";
+
+                    changeColors(customDraggableCard);
+                }
+            });
+        });
+
+        function changeColors(customDraggableCard) {
+            let bgColor, sectionColor;
+
+            switch (customDraggableCard.id) {
+    case "customDraggableCard1":
+        bgColor = "#1A0949"; // Dark purple
+        sectionColor = "#4A15E1"; // Bright purple
+        break;
+    case "customDraggableCard2":
+        bgColor = "#041964"; // Dark blue
+        sectionColor = "#105798"; // Bright blue
+        break;
+    case "customDraggableCard3":
+        bgColor = "#100606"; // Dark red
+        sectionColor = "#4B170C"; // Bright red
+        break;
+    case "customDraggableCard4":
+        bgColor = "#470A0A"; // Black
+        sectionColor = "#BD0F04"; // Red
+        break;
+    case "customDraggableCard5":
+        bgColor = "#190223"; // Dark purple
+        sectionColor = "#7A0F36"; // Dark red
+        break;
+    case "customDraggableCard6":
+        bgColor = "#422E07"; // Dark brown
+        sectionColor = "#9C5C11"; // Brown
+        break;
+    case "customDraggableCard7":
+        bgColor = "#094932"; // Dark green
+        sectionColor = "#E44A1A"; // Orange
+        break;
+    case "customDraggableCard8":
+        bgColor = "#06100E"; // Dark green
+        sectionColor = "#08A65A"; // Bright green
+        break;
+    case "customDraggableCard9":
+        bgColor = "#041A3B"; // Dark blue
+        sectionColor = "#2D847F"; // Teal
+        break;
+    case "customDraggableCard10":
+        bgColor = "#060F10"; // Dark gray
+        sectionColor = "#1F3F51"; // Blue-gray
+        break;
+    default:
+        bgColor = "white";
+        sectionColor = "black";
+}
+
+            document.body.style.backgroundColor = bgColor;
+            customWhiteSection.style.backgroundColor = sectionColor;
+
+            // Change background color of .cards-colors to sectionColor
+            cardsColors.style.backgroundColor = sectionColor;
+        }
+    });
+</script>
