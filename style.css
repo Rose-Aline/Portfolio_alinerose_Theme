@@ -88,7 +88,7 @@ h1 {
     background-color: #FF3D00;
     color: #FFFFFF;
     font-family: Montserrat, sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 800;
     padding: 10px 70px;
     border: none;
@@ -520,43 +520,43 @@ LOOP
 }
 
 #customDraggableCard1 {
-    background-color: #4A15E1; /* Set background color for card 1 */
+    background-color: #100D9E; /* Set background color for card 1 */
 }
 
 #customDraggableCard2 {
-    background-color: #105798; /* Set background color for card 2 */
+    background-color: #0E3685; /* Set background color for card 2 */
 }
 
 #customDraggableCard3 {
-    background-color: #812714; /* Set background color for card 3 */
+    background-color: #771414; /* Set background color for card 3 */
 }
 
 #customDraggableCard4 {
-    background-color: #BD0F04; /* Set background color for card 4 */
+    background-color: #BA0933; /* Set background color for card 4 */
 }
 
 #customDraggableCard5 {
-    background-color: #7A0F36; /* Set background color for card 5 */
+    background-color: #690F4A; /* Set background color for card 5 */
 }
 
 #customDraggableCard6 {
-    background-color: #9C5C11; /* Set background color for card 6 */
+    background-color: #813600; /* Set background color for card 6 */
 }
 
 #customDraggableCard7 {
-    background-color: #E44A1A; /* Set background color for card 7 */
+    background-color: #C38B37; /* Set background color for card 7 */
 }
 
 #customDraggableCard8 {
-    background-color: #08A65A; /* Set background color for card 8 */
+    background-color: #067981; /* Set background color for card 8 */
 }
 
 #customDraggableCard9 {
-    background-color: #2D847F; /* Set background color for card 9 */
+    background-color: #206752; /* Set background color for card 9 */
 }
 
 #customDraggableCard10 {
-    background-color: #1F3F51; /* Set background color for card 10 */
+    background-color: #062983; /* Set background color for card 10 */
 }
 
 #customDraggableCard1,
@@ -584,6 +584,12 @@ LOOP
 .custom-draggable-card:nth-child(n + 5) {
     z-index: 0;
 }
+/* Update the default background color and hide the text */
+.custom-draggable-card {
+    background-color: #FF3D00; /* Set default background color when unclicked */
+    color: transparent; /* Hide the text */
+}
+
 
 
  /*
@@ -716,24 +722,24 @@ PROJET LISTE
     font-size: 19px;
 }
 
-.white-section .post-grid {
+.post-grid-liste {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.white-section .post-grid .post {
+.post-grid-liste .post {
     width: calc(33.33% - 20px); 
     box-sizing: border-box;
     margin-top:30px
 }
 
 
-.white-section .post-grid .post .post-content {
+.post-grid-liste .post .post-content {
     margin-top: 10px; 
 }
 
-.white-section .post-grid .post .post-release-date {
+.post-grid-liste .post .post-release-date {
     margin: 5px; 
 }
 

@@ -126,7 +126,7 @@
         <div class="custom-draggable-card" id="customDraggableCard4">Autonomie</div>
         <div class="custom-draggable-card" id="customDraggableCard5">Flexibilité</div>
         <div class="custom-draggable-card" id="customDraggableCard6">Communication</div>
-        <div class="custom-draggable-card" id="customDraggableCard7">Positivité</div>
+        <div class="custom-draggable-card" id="customDraggableCard7">Positif</div>
         <div class="custom-draggable-card" id="customDraggableCard8">Créativité</div>
         <div class="custom-draggable-card" id="customDraggableCard9">Ouverture d’esprit</div>
         <div class="custom-draggable-card" id="customDraggableCard10">Efficacité</div>
@@ -157,10 +157,6 @@
 </div>
 
 <?php get_footer(); ?>
-
-
-
-
 
 
 
@@ -200,62 +196,81 @@
                     changeColors(customDraggableCard);
                 }
             });
+
+            // Toggle text visibility on click
+            customDraggableCard.addEventListener("click", function () {
+                customDraggableCard.classList.toggle("active");
+            });
         });
 
         function changeColors(customDraggableCard) {
-            let bgColor, sectionColor;
+            let bgColor, sectionColor, textColor;
 
             switch (customDraggableCard.id) {
-    case "customDraggableCard1":
-        bgColor = "#1A0949"; // Dark purple
-        sectionColor = "#4A15E1"; // Bright purple
-        break;
-    case "customDraggableCard2":
-        bgColor = "#041964"; // Dark blue
-        sectionColor = "#105798"; // Bright blue
-        break;
-    case "customDraggableCard3":
-        bgColor = "#100606"; // Dark red
-        sectionColor = "#4B170C"; // Bright red
-        break;
-    case "customDraggableCard4":
-        bgColor = "#470A0A"; // Black
-        sectionColor = "#BD0F04"; // Red
-        break;
-    case "customDraggableCard5":
-        bgColor = "#190223"; // Dark purple
-        sectionColor = "#7A0F36"; // Dark red
-        break;
-    case "customDraggableCard6":
-        bgColor = "#422E07"; // Dark brown
-        sectionColor = "#9C5C11"; // Brown
-        break;
-    case "customDraggableCard7":
-        bgColor = "#094932"; // Dark green
-        sectionColor = "#E44A1A"; // Orange
-        break;
-    case "customDraggableCard8":
-        bgColor = "#06100E"; // Dark green
-        sectionColor = "#08A65A"; // Bright green
-        break;
-    case "customDraggableCard9":
-        bgColor = "#041A3B"; // Dark blue
-        sectionColor = "#2D847F"; // Teal
-        break;
-    case "customDraggableCard10":
-        bgColor = "#060F10"; // Dark gray
-        sectionColor = "#1F3F51"; // Blue-gray
-        break;
-    default:
-        bgColor = "white";
-        sectionColor = "black";
-}
+                case "customDraggableCard1":
+                    bgColor = "#1A0949"; // Dark purple
+                    sectionColor = "#4A15E1"; // Bright purple
+                    textColor = "#FFFFFF"; // White
+                    break;
+                case "customDraggableCard2":
+                    bgColor = "#041964"; // Dark blue
+                    sectionColor = "#105798"; // Bright blue
+                    textColor = "#FFFFFF"; // White
+                    break;
+                case "customDraggableCard3":
+                    bgColor = "#100606"; // Dark red
+                    sectionColor = "#4B170C"; // Bright red
+                    textColor = "#FFFFFF"; // White
+                    break;
+                case "customDraggableCard4":
+                    bgColor = "#470A0A"; // Black
+                    sectionColor = "#BD0F04"; // Red
+                    textColor = "#FFFFFF"; // White
+                    break;
+                case "customDraggableCard5":
+                    bgColor = "#190223"; // Dark purple
+                    sectionColor = "#7A0F36"; // Dark red
+                    textColor = "#FFFFFF"; // White
+                    break;
+                case "customDraggableCard6":
+                    bgColor = "#422E07"; // Dark brown
+                    sectionColor = "#9C5C11"; // Brown
+                    textColor = "#FFFFFF"; // White
+                    break;
+                case "customDraggableCard7":
+                    bgColor = "#094932"; // Dark green
+                    sectionColor = "#E44A1A"; // Orange
+                    textColor = "#FFFFFF"; // White
+                    break;
+                case "customDraggableCard8":
+                    bgColor = "#06100E"; // Dark green
+                    sectionColor = "#08A65A"; // Bright green
+                    textColor = "#FFFFFF"; // White
+                    break;
+                case "customDraggableCard9":
+                    bgColor = "#041A3B"; // Dark blue
+                    sectionColor = "#2D847F"; // Teal
+                    textColor = "#FFFFFF"; // White
+                    break;
+                case "customDraggableCard10":
+                    bgColor = "#060F10"; // Dark gray
+                    sectionColor = "#1F3F51"; // Blue-gray
+                    textColor = "#FFFFFF"; // White
+                    break;
+                default:
+                    bgColor = "white";
+                    sectionColor = "black";
+                    textColor = "#000000"; // Black
+            }
 
             document.body.style.backgroundColor = bgColor;
             customWhiteSection.style.backgroundColor = sectionColor;
 
             // Change background color of .cards-colors to sectionColor
             cardsColors.style.backgroundColor = sectionColor;
+
+            // Set text color
+            customDraggableCard.style.color = textColor;
         }
     });
 </script>
