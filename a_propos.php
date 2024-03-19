@@ -8,7 +8,7 @@ get_header();
 <div class="contact-container">
 <div class="left-section-about">
     <div class="image-container">
-        <img src="http://localhost/portfolio_alinerose/wp-content/uploads/2024/03/alinerose_horizontal.jpg" alt="Alinerose Image">
+        <img src="https://alinerose.fr/wp-content/uploads/2024/03/alinerose_horizontal.jpg" alt="Alinerose Image">
         <div class="button-container">
             <button class="button button-small">MON CV</button>
             <button class="button button-small">COPIER L’URL</button>

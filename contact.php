@@ -7,7 +7,7 @@ get_header();
 
 <div class="contact-container">
     <div class="left-section">
-    <img src="http://localhost/portfolio_alinerose/wp-content/uploads/2024/03/alinerose_img.png" alt="Alinerose Image">
+    <img src="https://alinerose.fr/wp-content/uploads/2024/03/Alinerose_img.png" alt="Alinerose Image">
         <div class="text-content-left-section">
             <h2>Contactez moi !</h2>
             <p><a href="mailto:alinerose262003@gmail.com"><i class="fa fa-envelope"></i> alinerose262003@gmail.com</a></p>

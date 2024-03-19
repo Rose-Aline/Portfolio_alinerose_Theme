@@ -13,7 +13,7 @@
         <header id="vertical-header" >
             <div class="header-content">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="logo-link">
-                <img src="http://localhost/portfolio_alinerose/wp-content/uploads/2024/02/logo_website_portfolio.png" alt="Logo_du_site" class="site-icon">
+                <img src="https://alinerose.fr/wp-content/uploads/2024/03/logo_website_portfolio.png" alt="Logo_du_site" class="site-icon">
             </a>
                 
                 <div class="menu-container">

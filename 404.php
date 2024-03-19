@@ -9,10 +9,10 @@
 <body>
     <?php get_header(); ?> <!-- Inclusion de l'en-tête -->
     <div class="container" style="text-align: center;">
-        <h1 class="err">Erreur 404 </h1>
+        <h1>Erreur 404 </h1>
         
         <p>Désolé, la page que vous recherchez est introuvable.</p>
-        <button class="Retour"><a href="http://localhost/SAE303_hockey_cosom/">Retour à la page d'accueil</a></button>
+        <button class="button"><a href="https://alinerose.fr/">Retour à la page d'accueil</a></button>
     </div>
     <?php get_footer(); ?> <!-- Inclusion du pied de page -->
 

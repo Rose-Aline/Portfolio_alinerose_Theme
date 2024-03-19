@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div class="marg">
             <?php
-            $video_url = 'http://localhost/portfolio_alinerose/wp-content/uploads/2024/02/splin_video_portfolio.mp4';
+            $video_url = 'https://alinerose.fr/wp-content/uploads/2024/03/splin_video_portfolio.mp4';
             ?>
 
         <div class="video-container">
@@ -30,13 +30,13 @@
 
 <div class="white-section">
     <div class="section_competences">
-    <img class="profile-image" src="http://localhost/portfolio_alinerose/wp-content/uploads/2024/03/alinerose_img.png" alt="Aline_Rose_portrait">
+    <img class="profile-image" src="https://alinerose.fr/wp-content/uploads/2024/03/Alinerose_img.png" alt="Aline_Rose_portrait">
           
         <div class="competences">
             <h3 class="competences-title">MES COMPÉTENCES</h3>
 
             <div class="rounded-rectangle">
-                <div class="outlined-word-orange">DESIGN GRAPHIQUE</div>
+                <div class="outlined-word">DESIGN GRAPHIQUE</div>
                 <div class="outlined-word">LOGO</div>
                 <div class="outlined-word">ILLUSTRATION</div>
                 <div class="outlined-word">ANIMATION</div>
@@ -44,7 +44,7 @@
             </div>
 
             <div class="rounded-rectangle">
-                <div class="outlined-word-orange">COMMUNICATION</div>
+                <div class="outlined-word">COMMUNICATION</div>
                 <div class="outlined-word">ADOBE PHOTOSHOP</div>
                 <div class="outlined-word">MONTAGE VIDÉO</div>
                 <div class="outlined-word">RÉSEAUX SOCIAUX</div>
@@ -52,7 +52,7 @@
             </div>
 
             <div class="rounded-rectangle">
-                <div class="outlined-word-orange">DÉVELOPPEMENT</div>
+                <div class="outlined-word">DÉVELOPPEMENT</div>
                 <div class="outlined-word">WORDPRESS</div>
                 <div class="outlined-word">HTML / CSS</div>
                 <div class="outlined-word">VISUAL STUDIO CODE</div>
