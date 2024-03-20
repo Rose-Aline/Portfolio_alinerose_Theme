@@ -24,7 +24,7 @@
 
     <div class="container-title-section">
         <h5>Créatrice spécialisée dans le <span class="green">design graphique et la création de sites web</span>, je vous invite à découvrir mon portfolio pour explorer en détail mon travail ainsi que mon parcours.</h5>
-        <button class="button">DÉCOUVRIR MON PROFIL</button>
+        <a href="https://alinerose.fr/a_propos/"><button class="button">DÉCOUVRIR MON PROFIL</button></a>
     </div>
 </div>
 
@@ -109,7 +109,7 @@
     else : ?>
         <p class="nothing">Il n'y a pas de Post à afficher !</p>
     <?php endif; ?>
-    <button class="button button_portfolio">PORTFOLIO<i class="fas fa-long-arrow-alt-right"></i> </button>
+    <a href="https://alinerose.fr/realisations/"><button class="button button_portfolio">PORTFOLIO<i class="fas fa-long-arrow-alt-right"></i> </button></a>
 </div>
 
             </div>
@@ -148,7 +148,7 @@
     <div class="flex-item_2">
         <h1>MERCI DE </h1>
         <h1>VOTRE VISITE</h1>
-        <button class="button">ME CONTACTER</button>
+        <a href="https://alinerose.fr/contact/"><button class="button">ME CONTACTER</button></a>
     </div>
 </div>
 

@@ -285,7 +285,6 @@ PAGE 404
 
 button a {
     color:white; 
-    margin:60px
 }
 
 
@@ -798,11 +797,6 @@ margin-left:40px}
     text-decoration: underline; 
 }
 
-.contact-container a:hover {
-    color: #56B473; 
-    text-decoration: underline;
-}
-
 .text-content-left-section p {
     margin: 10px; 
 }
@@ -943,7 +937,7 @@ A PROPOS
 
 .button-small {
     padding: 10px;
-    width: 220px
+    width: 220px;
 }
 
 .about_title{
@@ -1035,4 +1029,9 @@ A PROPOS
 .about-contact-title {
     font-size: 40px;
     font-weight: 600;
+}
+
+.button a {
+    color: inherit; /* Utilise la couleur héritée du parent */
+    text-decoration: none; /* Supprime le soulignement */
 }

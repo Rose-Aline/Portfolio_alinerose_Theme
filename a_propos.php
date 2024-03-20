@@ -10,8 +10,8 @@ get_header();
     <div class="image-container">
         <img src="https://alinerose.fr/wp-content/uploads/2024/03/alinerose_horizontal.jpg" alt="Alinerose Image">
         <div class="button-container">
-            <button class="button button-small">MON CV</button>
-            <button class="button button-small">COPIER L’URL</button>
+        <a href="https://alinerose.fr/wp-content/uploads/2024/03/CV_Aline_rose.pdf" download><button class="button button-small">MON CV</button></a>
+        <a href="https://alinerose.fr/wp-content/uploads/2024/03/CV_Aline_rose.pdf" target="_blank"><button class="button button-small">COPIER L’URL</button></a>
         </div>
     </div>
     <div class="timeline">
@@ -114,7 +114,7 @@ get_header();
     else : ?>
         <p class="nothing">Il n'y a pas de Post à afficher !</p>
     <?php endif; ?>
-    <button class="button button_portfolio">PORTFOLIO<i class="fas fa-long-arrow-alt-right"></i> </button>
+    <a href="https://alinerose.fr/realisations/"><button class="button button_portfolio">PORTFOLIO<i class="fas fa-long-arrow-alt-right"></i></button></a>
 </div>
 
             </div>
@@ -125,7 +125,7 @@ get_header();
     <div class="right-section-about-2">
         <div class="right-content">
             <h1 class="about-contact-title">VOUS SOUHAITEZ M’ENVOYEZ UN MESSAGE ?</h1>
-            <button class="button">Contactez moi !</button>
+            <a href="https://alinerose.fr/contact/"><button class="button">Contactez moi !</button></a>
         </div>
     </div>
     <div class="left-section-about-2">
