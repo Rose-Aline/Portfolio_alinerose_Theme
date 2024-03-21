@@ -47,12 +47,16 @@ get_header(); ?>
             ?>
 
 
-        <div class="button_projet">
-            <?php
-            $lien_projet = get_field('projet_url');
-            ?>
-            <a href="<?php echo esc_url($lien_projet); ?>" class="button">DÉCOUVRIR LE SITE</a>
-        </div>
+<?php
+$lien_projet = get_field('projet_url');
+$texte_bouton = get_field('texte_bouton'); // Récupère le texte du bouton depuis ACF
+
+if ($lien_projet && $texte_bouton) { ?>
+    <div class="button_projet">
+        <a href="<?php echo esc_url($lien_projet); ?>" class="button"><?php echo esc_html($texte_bouton); ?></a>
+    </div>
+<?php } ?>
+
 </div>
 
 
