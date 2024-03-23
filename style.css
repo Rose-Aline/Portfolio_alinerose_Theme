@@ -417,10 +417,12 @@ LOOP
     position: relative;
     overflow: hidden;
 }
-
 .post-image {
-    height: 250px; 
+    height: 250px;
+    background-size: cover; /* Cover the entire container while maintaining aspect ratio */
+    background-position: center; /* Center the background image */
 }
+
 
 .top-row {
     grid-row: 1;
@@ -733,7 +735,21 @@ PROJET
     transform: translateY(0); /* Move posts back to their original position */
   }
 
+  .linked-images-inner {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    grid-gap: 0; /* Gap between items */
 
+  }
+  
+  .linked-image-horizontal {
+    width: 100%; /* Take 100% of the width */
+    max-height: 263px; /* Set maximum height */
+    border-radius: 0; /* Remove corner rounding */
+  }
+  
 
 /*
 PROJET LISTE
