@@ -4,9 +4,9 @@ Template Name: Portfolio Work Template
 */
 get_header(); ?>
 
-<main class="marg">
+<main class="marg_big">
 
-    <div class="white-section">
+    <div class="white-section white-section-remove-big-marg ">
         <?php
         while (have_posts()) : the_post();
         ?>
@@ -36,7 +36,7 @@ get_header(); ?>
         ?>
     </div>
 
-    <div class="linked-images">
+    <div class="linked-images ">
         <div class="flex-item_1_projet">
             <?php
             // Phone image
@@ -60,8 +60,8 @@ if ($lien_projet && $texte_bouton) { ?>
 </div>
 
 
-        <div class="flex-item_2_projet">
-            <div class="linked-images-inner">
+        <div class="flex-item_2_projet ">
+            <div class="linked-images-inner ">
                 <?php
                 // Linked images 1 to 4
                 $linked_images = array('image_square_1', 'image_square_2', 'image_square_3', 'image_square_4');

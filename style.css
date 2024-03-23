@@ -16,94 +16,102 @@ Tags: Portfolio, Aline Rose, Web Developper, Web Designer, Designer, Design, Web
 GENERAL
 */
 
- body {
-     margin: 0;
-     padding-left: 5%;
-     font-family: 'Roboto', sans-serif;
-     font-size: 17px; 
-     list-style: none;
-     background-color: #191114;
-     color:white
- }
+body {
+    margin: 0;
+    padding-left: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.0625em; /* 17px converted to em */
+    list-style: none;
+    background-color: #191114;
+    color:white
+}
 
- .white-section {
+.white-section {
     background-color: #E3DED3;
     color: #000;
-    margin:0 -80px;
-    padding:0 80px}
+    margin:0 -5em; /* Adjusted margin */
+    padding:0 5em; /* Adjusted padding */
+}
 
-    .white-section-2 {
-        background-color: #E3DED3;
-        color: #000;
-    }
+.white-section-2 {
+    background-color: #E3DED3;
+    color: #000;
+}
 
-    a{
+.white-section-remove-big-marg {
+    margin: 0 -10em; /* Adjusted margin */
+    padding: 0 8.75em; /* Adjusted padding */
+}
+
+a {
     text-decoration: none;
-color:rgb(255, 255, 255)}
+    color:rgb(255, 255, 255);
+}
 
 h6 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    font-weight: 500; 
-    margin:10px 0
+    font-size: 0.9375em; /* 15px converted to em */
+    font-weight: 500;
+    margin: 0.625em 0; /* 10px converted to em */
 }
 
 h5 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 400; 
+    font-size: 1em; /* 16px converted to em */
+    font-weight: 400;
 }
 
 h4 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    font-weight: 400; 
-    margin:10px
+    font-size: 1.875em; /* 30px converted to em */
+    font-weight: 400;
+    margin: 0.625em; /* 10px converted to em */
 }
-
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
-    font-weight: 700; 
-    margin:0;
-
+    font-size: 1.75em; /* 28px converted to em */
+    font-weight: 700;
+    margin: 0;
 }
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 31px;
-    font-weight: 600; 
-
+    font-size: 1.9375em; /* 31px converted to em */
+    font-weight: 600;
 }
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 44px;
-    font-weight: 600; 
-
+    font-size: 2.75em; /* 44px converted to em */
+    font-weight: 600;
 }
 
 .button {
     background-color: #FF3D00;
     color: #FFFFFF;
     font-family: Montserrat, sans-serif;
-    font-size: 16px;
+    font-size: 0.95em; /* 16px converted to em */
     font-weight: 800;
-    padding: 10px 70px;
+    padding: 0.625em 5.375em; /* 10px and 70px converted to em */
     border: none;
-    border-radius: 30px;
+    border-radius: 1.875em; /* 30px converted to em */
     cursor: pointer;
 }
 
-.green{
-    color: #56B473;}
-
-.marg{
-    margin: 0 80px;
+.green {
+    color: #56B473;
 }
 
- /*
+.marg {
+    margin: 0 5em; /* Adjusted margin */
+}
+
+.marg_big {
+    margin: 0 10em; /* Adjusted margin */
+}
+
+/*
 CSS HEADER
 */
 
@@ -123,7 +131,6 @@ CSS HEADER
     align-items: center;
 }
 
-
 .header-content {
     display: flex;
     flex-direction: column;
@@ -133,8 +140,8 @@ CSS HEADER
 }
 
 .site-icon {
-    padding-top:60px;
-    width: 50px;
+    padding-top: 3.75em; /* 60px converted to em */
+    width: 3.125em; /* 50px converted to em */
     height: auto;
 }
 
@@ -145,25 +152,23 @@ CSS HEADER
 }
 
 #vertical-header .social-icons .share {
-    font-size: 30px;
+    font-size: 1.875em; /* 30px converted to em */
     color: black;
-    padding-bottom:15px;
+    padding-bottom: 0.9375em; /* 15px converted to em */
 }
 
 #vertical-header .social-icons {
-    padding-bottom:20px;
+    padding-bottom: 1.25em; /* 20px converted to em */
 }
 
 #vertical-header .menu-container {
     display: flex;
     align-items: center;
-    padding-right: 25px;
-
+    padding-right: 1.5625em; /* 25px converted to em */
 }
 
-#vertical-header .menu-item {    
-    margin-top: 40px;
-    
+#vertical-header .menu-item {
+    margin-top: 2.5em; /* 40px converted to em */
 }
 
 #vertical-header .menu-item a {
@@ -171,86 +176,82 @@ CSS HEADER
     text-orientation: mixed;
     white-space: nowrap;
     rotate: 180deg;
-    
 }
-    
-#vertical-header .main-menu a {
 
+#vertical-header .main-menu a {
     color: black !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     text-decoration: none;
-    border-left: 4px solid #FCFCFC;
+    border-left: 0.25em solid #FCFCFC; /* 4px converted to em */
     transition: border-left-color 0.3s ease;
     box-sizing: border-box;
 }
 
-#vertical-header .main-menu a:active, #vertical-header .main-menu a:focus, #vertical-header .main-menu a:hover  {
+#vertical-header .main-menu a:active,
+#vertical-header .main-menu a:focus,
+#vertical-header .main-menu a:hover {
     border-left-color: #FF2C2C;
 }
 
-
- /*
+/*
 FOOTER
 */
 .black-background {
     background-color: #030303;
     width: 100%;
-    padding: 8px 0;
+    padding: 0.5em 0;
 }
-
 
 .footer-menu nav ul,
 .footer-social-menu ul {
     list-style: none;
     padding: 0;
-    margin: 0; 
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    font-weight: 400;     
-    padding-top:10px
+    font-size: 0.9375em; /* 15px converted to em */
+    font-weight: 400;
+    padding-top: 0.625em; /* 10px converted to em */
 }
 
 .footer-menu nav li,
-.footer-social-menu li{
+.footer-social-menu li {
     display: inline;
-    margin-right: 18px;
+    margin-right: 1.125em; /* 18px converted to em */
 }
 
 .title_footer {
     display: flex;
     align-items: flex-end;
     position: relative;
-    color:#FF3D00;
+    color: #FF3D00;
 }
 
-.title_portfolio_footer{
-padding-right:14px
+.title_portfolio_footer {
+    padding-right: 0.875em; /* 14px converted to em */
 }
 
 .small_hr {
     border: none;
     background-color: white;
-    height: 1px;
+    height: 0.0625em; /* 1px converted to em */
     width: 100%;
     position: absolute;
     left: 0;
 }
 
-
 .footer-content-full {
-    display: flex; 
+    display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 400;     
-
+    font-size: 0.875em; /* 14px converted to em */
+    font-weight: 400;
 }
 
 .Mentions_footer {
-    font-size: 14px;
-    padding-bottom: 5px;
+    font-size: 0.875em; /* 14px converted to em */
+    padding-bottom: 0.3125em; /* 5px converted to em */
     font-weight: 300;
     text-align: center;
 }
@@ -317,7 +318,7 @@ LOOP
     overflow: hidden;
     position: relative;
     border-radius: 0 50px 50px 0;
-    margin-left: -80px;
+    margin-left: -85px;
 }
 
 .video-container-small video {
@@ -410,7 +411,7 @@ LOOP
 
 }
 
-.post {
+.post_main {
     background-size: cover;
     background-position: center;
     position: relative;
@@ -467,7 +468,7 @@ LOOP
 
 .footer_video video{
     width: 100%;
-    margin-left: -80px; 
+    margin-left: -85px; 
 }
 
 
@@ -654,7 +655,7 @@ PROJET
  /*Projet - Section second*/
 
  .linked-images {
-    margin: 40px 0 80px 0;
+    margin: 20px 0 80px 0;
     display: grid;
     grid-template-columns: 40% 50%;
     justify-content: center; 
@@ -709,6 +710,32 @@ PROJET
     font-weight: 400;
  }
 
+
+ @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .post_main {
+    opacity: 0; /* Set posts as transparent by default */
+    transform: translateY(50px); /* Start from slightly below their original position */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Faster transition */
+  }
+  
+  .animate-on-scroll {
+    opacity: 1; /* Make posts visible after animation */
+    transform: translateY(0); /* Move posts back to their original position */
+  }
+  
+  
+
+
 /*
 PROJET LISTE
 */
@@ -745,6 +772,7 @@ PROJET LISTE
 
 .portfolio-title {
     margin: 0;
+    
 }
 
 .portfolio-subtitle {
@@ -755,6 +783,7 @@ PROJET LISTE
 
 .portfolio-header{
     margin: 40px;
+
 }
 
 

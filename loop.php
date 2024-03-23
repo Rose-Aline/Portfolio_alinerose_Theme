@@ -98,7 +98,7 @@
             // Add a class for the first three posts
             $post_class = ($post_count <= 3) ? 'top-row' : 'bottom-row';
             ?>
-            <article class="post <?php echo $post_class; ?>">
+            <article class="post_main <?php echo $post_class; ?>">
                 <a href="<?php the_permalink(); ?>">
                     <div class="post-image" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>');"></div>
                     <div class="post-content"></div>
@@ -273,4 +273,49 @@
             customDraggableCard.style.color = textColor;
         }
     });
+</script>
+
+<script>
+// Function to check if an element is in viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to add animation class to each post with staggered delay after the first one
+function animatePostsOnScroll() {
+  const postElements = document.querySelectorAll('.post_main');
+  let firstPostScrolledPast = false;
+
+  postElements.forEach((post, index) => {
+    if (!firstPostScrolledPast && isInViewport(post)) {
+      firstPostScrolledPast = true; // Set flag once the first post is scrolled past
+    }
+
+    if (firstPostScrolledPast) {
+      setTimeout(() => {
+        post.classList.add('animate-on-scroll');
+      }, (index - 1) * 200); // Start adding animation to subsequent posts with a delay
+    }
+  });
+
+  // Remove scroll listener once all posts have been animated
+  if (firstPostScrolledPast) {
+    window.removeEventListener('scroll', animatePostsOnScroll);
+  }
+}
+
+// Listen for scroll event and trigger animation for each post
+window.addEventListener('scroll', animatePostsOnScroll);
+
+// Trigger animation for posts initially if already in viewport
+animatePostsOnScroll();
+
+
+
 </script>
