@@ -154,7 +154,7 @@ CSS HEADER
 #vertical-header .social-icons .share {
     font-size: 1.875em; /* 30px converted to em */
     color: black;
-    padding-bottom: 0.9375em; /* 15px converted to em */
+    padding-bottom: 0.5375em; /* 15px converted to em */
 }
 
 #vertical-header .social-icons {
@@ -732,8 +732,7 @@ PROJET
     opacity: 1; /* Make posts visible after animation */
     transform: translateY(0); /* Move posts back to their original position */
   }
-  
-  
+
 
 
 /*
@@ -760,19 +759,20 @@ PROJET LISTE
     margin-top:30px
 }
 
-
-.post-grid-liste .post .post-content {
-    margin-top: 10px; 
-}
-
-.post-grid-liste .post .post-release-date {
+.post-grid-liste .post {
     margin: 5px; 
 }
 
+.post-release-date{
+    margin:5px 0 10px 0
+}
+
+.post-image{
+    margin-bottom: 10px
+}
 
 .portfolio-title {
     margin: 0;
-    
 }
 
 .portfolio-subtitle {
@@ -783,10 +783,12 @@ PROJET LISTE
 
 .portfolio-header{
     margin: 40px;
-
 }
 
-
+  
+.top-margin-liste{
+    padding-top:20px
+  }
 
 /*
 CONTACT

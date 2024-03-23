@@ -11,7 +11,7 @@ get_header();
         <h4 class="portfolio-subtitle">Découvrir mes réalisations</h4>
     </div>
 
-    <div class="white-section">
+    <div class="white-section top-margin-liste">
         <div class="post-grid">
             <?php
             // Query to retrieve all pages using 'projet.php' template
