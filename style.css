@@ -654,12 +654,73 @@ PROJET
 
 }
 
+
+ /*
+PROJET
+*/
+
+ /*Projet - Section main*/
+ .flex-container {
+    display: flex;
+}
+
+.flex-item {
+    flex: 0 0 40%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-item_image {
+    flex: 0 0 60%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projet-title {
+    text-transform: uppercase;
+    background-color: #242424;
+    padding: 20px 60px; 
+    width:400px;
+    color: white;
+    margin: 0;
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px;
+    
+}
+
+.projet-content {
+    background-color: #F8F8F8;
+    padding: 10px 60px 60px; 
+    width:400px;
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px; 
+    font-size: 16px;
+}
+
+.projet-content em {
+    color: #FF0000;
+    font-style: normal;
+}
+
+.custom-image 
+{
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    margin: 30px 0;
+
+}
+
  /*Projet - Section second*/
 
  .linked-images {
-    margin: 20px 0 80px 0;
+    margin: 40px 0 80px 0;
     display: grid;
-    grid-template-columns: 40% 50%;
+    grid-template-columns: 50% 50%;
     justify-content: center; 
     align-items: center; 
     width: 100%;
@@ -694,7 +755,7 @@ PROJET
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap:10px   ;
-    border-radius: 10px; 
+    border-radius: 5px; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
     width: 90%;
  }
@@ -735,10 +796,11 @@ PROJET
     transform: translateY(0); /* Move posts back to their original position */
   }
 
-  .linked-images-inner {
+  .linked-images-inner-horizontal {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     display: grid;
+    gap:10px;
     grid-template-columns: 1fr; /* Single column */
     grid-gap: 0; /* Gap between items */
 
@@ -748,6 +810,8 @@ PROJET
     width: 100%; /* Take 100% of the width */
     max-height: 263px; /* Set maximum height */
     border-radius: 0; /* Remove corner rounding */
+    margin-top:20px;
+
   }
   
 

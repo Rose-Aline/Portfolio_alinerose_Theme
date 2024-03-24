@@ -58,7 +58,7 @@ if ($lien_projet && $texte_bouton) { ?>
 <?php } ?>
 
 </div>
-<div class="linked-images-inner">
+<div class="linked-images-inner-horizontal">
     <?php
     // Linked images horizontal_1 and horizontal_2
     $linked_images = array('horizontal_1', 'horizontal_2');
