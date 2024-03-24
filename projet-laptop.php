@@ -49,7 +49,7 @@ get_header(); ?>
 
 <?php
 $lien_projet = get_field('projet_url');
-$texte_bouton = get_field('texte_bouton'); // Récupère le texte du bouton depuis ACF
+$texte_bouton = get_field('texte_bouton'); 
 
 if ($lien_projet && $texte_bouton) { ?>
     <div class="button_projet">
