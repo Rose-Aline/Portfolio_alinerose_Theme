@@ -22,7 +22,11 @@ get_header();
                 'meta_query'     => array(
                     array(
                         'key'   => '_wp_page_template',
-                        'value' => 'projet.php', // Template name to filter by
+                        'value' => 'projet.php',
+                    ),
+                    array(
+                        'key'   => '_wp_page_template',
+                        'value' => 'projet-laptop.php',
                     ),
                 ),
             );

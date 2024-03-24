@@ -73,44 +73,49 @@
    
    
         <div class="post-grid">
-    <?php
-    // Query to retrieve the 6 most recent pages using 'projet.php' template
-    $args = array(
-        'post_type'      => 'page',
-        'posts_per_page' => 6, // Number of pages to display
-        'order'          => 'DESC', // Sort pages in descending order
-        'orderby'        => 'date', // Order pages by date
-        'meta_query'     => array(
-            array(
-                'key'   => '_wp_page_template',
-                'value' => 'projet.php', // Template name to filter by
-            ),
+<?php
+$args = array(
+    'post_type'      => 'page',
+    'posts_per_page' => 6,
+    'order'          => 'DESC',
+    'orderby'        => 'date',
+    'meta_query'     => array(
+        'relation' => 'OR', // Combine conditions with OR
+        array(
+            'key'   => '_wp_page_template',
+            'value' => 'projet.php',
         ),
-    );
+        array(
+            'key'   => '_wp_page_template',
+            'value' => 'projet-laptop.php',
+        ),
+    ),
+);
 
-    $recent_pages = new WP_Query($args);
+$recent_pages = new WP_Query($args);
 
-    if ($recent_pages->have_posts()) :
-        $post_count = 0;
-        while ($recent_pages->have_posts()) : $recent_pages->the_post();
-            $post_count++;
+if ($recent_pages->have_posts()) :
+    $post_count = 0;
+    while ($recent_pages->have_posts()) : $recent_pages->the_post();
+        $post_count++;
 
-            // Add a class for the first three posts
-            $post_class = ($post_count <= 3) ? 'top-row' : 'bottom-row';
-            ?>
-            <article class="post_main <?php echo $post_class; ?>">
-                <a href="<?php the_permalink(); ?>">
-                    <div class="post-image" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>');"></div>
-                    <div class="post-content"></div>
-                </a>
-            </article>
-        <?php endwhile;
-        wp_reset_postdata();
-    else : ?>
-        <p class="nothing">Il n'y a pas de Post à afficher !</p>
-    <?php endif; ?>
-    <a href="https://alinerose.fr/realisations/"><button class="button button_portfolio">PORTFOLIO<i class="fas fa-long-arrow-alt-right"></i> </button></a>
+        // Add a class for the first three posts
+        $post_class = ($post_count <= 3) ? 'top-row' : 'bottom-row';
+        ?>
+        <article class="post_main <?php echo $post_class; ?>">
+            <a href="<?php the_permalink(); ?>">
+                <div class="post-image" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>');"></div>
+                <div class="post-content"></div>
+            </a>
+        </article>
+    <?php endwhile;
+    wp_reset_postdata();
+else : ?>
+    <p class="nothing">Il n'y a pas de Post à afficher !</p>
+<?php endif; ?>
+<a href="https://alinerose.fr/realisations/"><button class="button button_portfolio">PORTFOLIO<i class="fas fa-long-arrow-alt-right"></i> </button></a>
 </div>
+
 
             </div>
         </div>
