@@ -712,7 +712,6 @@ PROJET
     height: auto;
     object-fit: cover;
     margin: 30px 0;
-
 }
 
  /*Projet - Section second*/
@@ -732,6 +731,7 @@ PROJET
     left: 20%;
     transform: translate(-50%, -50%);
     transform: rotate(-15deg); 
+    
     
 }
 .linked-image-top img {
@@ -758,6 +758,7 @@ PROJET
     border-radius: 5px; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
     width: 90%;
+    
  }
 
  .linked-image img {
@@ -811,8 +812,8 @@ PROJET
     max-height: 263px; /* Set maximum height */
     border-radius: 0; /* Remove corner rounding */
     margin-top:20px;
-
   }
+
   
 
 /*

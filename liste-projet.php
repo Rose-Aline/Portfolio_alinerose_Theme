@@ -20,6 +20,7 @@ get_header();
                 'order'          => 'DESC', // Sort pages in descending order
                 'orderby'        => 'date', // Order pages by date
                 'meta_query'     => array(
+                    'relation' => 'OR', // Combine conditions with OR
                     array(
                         'key'   => '_wp_page_template',
                         'value' => 'projet.php',
@@ -30,7 +31,7 @@ get_header();
                     ),
                 ),
             );
-
+            
             $recent_pages = new WP_Query($args);
 
             if ($recent_pages->have_posts()) :
