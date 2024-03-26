@@ -1,20 +1,22 @@
 <?php
 /*
-Template Name: Page List with Portfolio Work Template
+Template Name: Liste projet 
 */
-get_header();
-?>
-    <main class="marg">
+get_header(); ?>
+
 
     <div class="portfolio-header">
-        <h1 class="portfolio-title">PORTFOLIO</h1>
-        <h4 class="portfolio-subtitle">Découvrir mes réalisations</h4>
+        <main class="marg">
+            <h1 class="portfolio-title">PORTFOLIO</h1>
+            <h4 class="portfolio-subtitle">Découvrir mes réalisations</h4>
+        </div>
     </div>
 
     <div class="white-section top-margin-liste">
+    <main class="marg">
+
         <div class="post-grid">
             <?php
-            // Query to retrieve all pages using 'projet.php' template
             $args = array(
                 'post_type'      => 'page',
                 'order'          => 'DESC', // Sort pages in descending order
@@ -59,5 +61,6 @@ get_header();
         </div>
     </div>
 </main>
+
 
 <?php get_footer(); ?>

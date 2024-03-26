@@ -7,7 +7,7 @@ Description: Le thème développer pour mon portfolio en ligne
 Version: 0.1
 Tags: Portfolio, Aline Rose, Web Developper, Web Designer, Designer, Design, Web
 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 /* style.css */
 @import url('./src/styles.css');
@@ -15,6 +15,7 @@ Tags: Portfolio, Aline Rose, Web Developper, Web Designer, Designer, Design, Web
  /*
 GENERAL
 */
+
 
 body {
     margin: 0;
@@ -29,8 +30,6 @@ body {
 .white-section {
     background-color: #E3DED3;
     color: #000;
-    margin:0 -5em; /* Adjusted margin */
-    padding:0 5em; /* Adjusted padding */
 }
 
 .white-section-2 {
@@ -107,9 +106,15 @@ h1 {
     margin: 0 5em; /* Adjusted margin */
 }
 
+.marg_middle {
+    margin: 0 7em; /* Adjusted margin */
+}
+
 .marg_big {
     margin: 0 10em; /* Adjusted margin */
 }
+
+
 
 /*
 CSS HEADER
@@ -265,15 +270,13 @@ FOOTER
     text-align: right
 }
 
-
  /*
 PAGE 404
 */
 
 .err{
     font-size: 110px;
-    margin-bottom:0px
-
+    margin-bottom:0px;
 }
 
 .Retour{
@@ -318,7 +321,6 @@ LOOP
     overflow: hidden;
     position: relative;
     border-radius: 0 50px 50px 0;
-    margin-left: -85px;
 }
 
 .video-container-small video {
@@ -407,8 +409,7 @@ LOOP
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px; 
     padding-top:15px;
-    padding-bottom:65px
-
+    padding-bottom:65px;
 }
 
 .post_main {
@@ -486,7 +487,6 @@ LOOP
  /*Loop - cartes couleurs*/
 .cards-colors{
     background-color: #242424;
-    margin: 0  -80px;
     padding:40px 0;
     text-align: center;
 }
@@ -601,181 +601,173 @@ LOOP
 PROJET
 */
 
- /*Projet - Section main*/
 .flex-container {
     display: flex;
+    gap:100px;
+    margin: 50px 0;
 }
 
-.flex-item {
-    flex: 0 0 40%; 
+.left-container {
+    flex: 0 0 50%; /* Adjust the width as needed */
+}
+
+.right-container {
+    flex: 0 0 35%; /* Adjust the width as needed */
+    font-weight: 200; /* Thin font weight */
+    font-size:21px
+}
+
+.projet_title_h2 {
+    margin-bottom:0; /* Adjust spacing */
+    text-transform: uppercase; /* Convert text to uppercase */
+}
+
+.tag {
+    font-size: 14px;
+    text-transform: uppercase; /* Convert text to uppercase */
+    background-color: transparent;
+    border: 1px solid #ffffff; /* White outline */
+    border-radius: 20px; /* Rounded corners */
+    color: #ffffff; /* White text */
+    padding: 5px 10px; /* Adjust padding as needed */
+    margin-right: 15px; /* Increase the gap between tags */
+    margin-bottom: 15px; /* Adjust margin between buttons */
+    width: 50%; /* Take 50% of the width */
+    max-width: calc(45% - 15px); /* Adjusted for margin-right */
+}
+
+.tags_container{
+    margin-top:20px
+}
+
+/* Adjustments for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .left-container, .right-container {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.flexed_date {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Align items vertically at the center */
+    margin: 0; /* Remove any default margins */
+    font-size: 16px; /* Inherit font size */
+    font-weight: 400; /* Inherit font weight */
+    gap:10px;
+}
+.right-container {
+    position: relative; /* Set position to relative */
 }
 
-.flex-item_image {
-    flex: 0 0 60%; 
+.button.voir-projet {
+    font-size: 14px; /* Adjust font size as needed */
+    width: 60%; /* Adjust button width as needed */
+    text-align: center; /* Center the text horizontally */
+    padding: 10px 100px; /* Adjust padding as needed */
+}
+
+ /*Projet - other*/
+.padding_project{
+    padding: 0 10%;
+}
+ .flexed_concept {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 10%; /* Gap between flex items */
+    align-items: stretch; /* Make all flex items the same height */
+    padding: 50px 0
 }
 
-.projet-title {
-    text-transform: uppercase;
-    background-color: #242424;
-    padding: 20px 60px; 
-    width:400px;
-    color: white;
-    margin: 0;
-    border-top-left-radius: 20px; 
-    border-top-right-radius: 20px;
+
+.flexed-image-2_concept {
+    width: 50%; 
+}
+
+.flexed-text_project_concept {
+    width: 50%; /* 50% of the screen */
     
 }
 
-.projet-content {
-    background-color: #F8F8F8;
-    padding: 10px 60px 60px; 
-    width:400px;
-    border-bottom-left-radius: 20px; 
-    border-bottom-right-radius: 20px; 
-    font-size: 16px;
-}
-
-.projet-content em {
-    color: #FF0000;
-    font-style: normal;
-}
-
-.custom-image 
-{
-    width: 80%;
-    height: auto;
-    object-fit: cover;
-    margin: 30px 0;
-
-}
-
-
- /*
-PROJET
-*/
-
- /*Projet - Section main*/
- .flex-container {
-    display: flex;
-}
-
-.flex-item {
-    flex: 0 0 40%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.flex-item_image {
-    flex: 0 0 60%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.projet-title {
-    text-transform: uppercase;
-    background-color: #242424;
-    padding: 20px 60px; 
-    width:400px;
-    color: white;
-    margin: 0;
-    border-top-left-radius: 20px; 
-    border-top-right-radius: 20px;
-    
-}
-
-.projet-content {
-    background-color: #F8F8F8;
-    padding: 10px 60px 60px; 
-    width:400px;
-    border-bottom-left-radius: 20px; 
-    border-bottom-right-radius: 20px; 
-    font-size: 16px;
-}
-
-.projet-content em {
-    color: #FF0000;
-    font-style: normal;
-}
-
-.custom-image 
-{
-    width: 80%;
-    height: auto;
-    object-fit: cover;
-    margin: 30px 0;
-}
-
- /*Projet - Section second*/
-
- .linked-images {
-    margin: 40px 0 80px 0;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: center; 
-    align-items: center; 
+/* Ensure all images cover their containers */
+.flexed-image-2_concept img, .flexed-image-1_concept img {
     width: 100%;
+    height: 100%;
+    max-height:300px;
+    object-fit: cover;
 }
 
-.linked-image-top {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    transform: rotate(-15deg); 
-    
-    
-}
-.linked-image-top img {
-    width: 90%;
+.max_height_picture img {
+    max-height:  450px;
 }
 
-.linked-images-inner img{
-    height: 90%;
+.centered-image {
+    width: 100%;
+    margin: 0 auto; /* Center the image horizontally */
+    text-align: center; /* Center the image within its container */
 }
 
-.phone-image {
-    height: 90%; 
-    width:auto;
-    margin-bottom:20px
+.centered-image img {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    max-height:  200px;
+    object-fit: cover;
+
+
 }
 
-.flex-item_2_projet {
-    position: relative; 
+/* Responsive layout adjustment */
+@media screen and (max-width: 768px) {
+    .flexed-concept > div {
+        width: 100%; /* Full width for smaller screens */
+    }
 }
-.linked-images-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap:10px   ;
-    border-radius: 5px; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-    width: 90%;
-    
- }
 
- .linked-image img {
-    border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
-    
- }
+.Tags_programmes {
+    background-color: #F8F8F8;
+    padding: 20px 0; /* Add padding for spacing */
+    margin-top: 40px;
+}
 
- .projet_title_h2, .release-date{
-    margin:5px
- }
- .release-date{
-    font-weight: 400;
- }
+.realise-avec {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px; /* Adjust spacing */
+}
+
+.programme-icons {
+    display: flex;
+    flex-wrap: wrap; /* Wrap icons onto the next line */
+    justify-content: center;
+}
+
+.programme-icon {
+    text-align: center;
+    margin: 20px; /* Adjust spacing between icons */
+    flex-basis: calc(25% - 40px); /* Set maximum of 4 icons per line with larger margin */
+}
+
+.programme-icon i {
+    margin-bottom: 10px; /* Adjust spacing between icon and program name */
+}
+
+.programme-icon span {
+    display: block;
+    font-size: 14px; /* Adjust font size for program names */
+}
+
+.about_portfolio_projet{
+    margin: 3% 10% 0 10%;
+}
+
+.final_section{
+    padding-bottom:2%
+}
+
+ /*Projet - PARALLAX*/
 
 
  @keyframes fade-in {
@@ -800,24 +792,24 @@ PROJET
     transform: translateY(0); /* Move posts back to their original position */
   }
 
-  .linked-images-inner-horizontal {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    display: grid;
-    gap:10px;
-    grid-template-columns: 1fr; /* Single column */
-    grid-gap: 0; /* Gap between items */
+  .parallax-container {
+    width: 100%;
+    height: 50vh; /* 50% of the viewport height */
+    overflow: hidden;
+    position: relative;
+}
 
-  }
-  
-  .linked-image-horizontal {
-    width: 100%; /* Take 100% of the width */
-    max-height: 263px; /* Set maximum height */
-    border-radius: 0; /* Remove corner rounding */
-    margin-top:20px;
-  }
+.parallax-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the image take the entire width */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-position 0.5s ease; /* Adjust animation speed */
+}
 
-  
 
 /*
 PROJET LISTE
@@ -871,7 +863,7 @@ PROJET LISTE
 
   
 .top-margin-liste{
-    padding-top:20px
+    padding-top:20px;
   }
 
 /*

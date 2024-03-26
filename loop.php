@@ -13,6 +13,7 @@
 
             <h4>Bonjour, je suis <span class="green"><b>ALINE ROSE</b></span>  étudiante en design graphique en MMI.</h4>
             <hr class="principale_hr">
+            </div>
 
             <div class="wrapper">
     <div class="video-container-small">
@@ -29,6 +30,8 @@
 </div>
 
 <div class="white-section">
+<div class="marg">
+
     <div class="section_competences">
     <img class="profile-image" src="https://alinerose.fr/wp-content/uploads/2024/03/Alinerose_img.png" alt="Aline_Rose_portrait">
           
@@ -59,6 +62,7 @@
                 <div class="outlined-word">TAILWIND / BOOTSTRAP</div>
             </div>
 
+        </div>
         </div>
 
     </div>
@@ -120,7 +124,7 @@ else : ?>
             </div>
         </div>
 
-<div class="cards-colors">
+<div class="cards-colors ">
         <h1>CRÉEZ UNE IDENTITÉ QUI VOUS CORRESPOND</h1>
     <p>Cliquez et faites glisser une carte pour découvrir ce que vous réserve aujourd'hui.</p>
 
@@ -159,7 +163,6 @@ else : ?>
 
 
     
-</div>
 
 <?php get_footer(); ?>
 
@@ -324,3 +327,4 @@ animatePostsOnScroll();
 
 
 </script>
+
