@@ -870,6 +870,17 @@ PROJET LISTE
     margin-bottom: 10px
 }
 
+.post {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: scale(1.05); /* Vous pouvez ajuster ce facteur d'échelle selon vos préférences */
+}
+
+
 .portfolio-title {
     margin: 0;
 }

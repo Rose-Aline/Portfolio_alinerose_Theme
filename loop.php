@@ -29,42 +29,39 @@
     </div>
 </div>
 
-<div class="white-section">
-<div class="marg">
+<div class="white-section hidden lg:block">
+    <div class="marg">
+        <div class="section_competences">
+            <img class="profile-image" src="https://alinerose.fr/wp-content/uploads/2024/03/Alinerose_img.png" alt="Aline_Rose_portrait">
+            
+            <div class="competences">
+                <h3 class="competences-title">MES COMPÉTENCES</h3>
 
-    <div class="section_competences">
-    <img class="profile-image" src="https://alinerose.fr/wp-content/uploads/2024/03/Alinerose_img.png" alt="Aline_Rose_portrait">
-          
-        <div class="competences">
-            <h3 class="competences-title">MES COMPÉTENCES</h3>
+                <div class="rounded-rectangle">
+                    <div class="outlined-word">DESIGN GRAPHIQUE</div>
+                    <div class="outlined-word">LOGO</div>
+                    <div class="outlined-word">ILLUSTRATION</div>
+                    <div class="outlined-word">ANIMATION</div>
+                    <div class="outlined-word">MAQUETTAGE</div>
+                </div>
 
-            <div class="rounded-rectangle">
-                <div class="outlined-word">DESIGN GRAPHIQUE</div>
-                <div class="outlined-word">LOGO</div>
-                <div class="outlined-word">ILLUSTRATION</div>
-                <div class="outlined-word">ANIMATION</div>
-                <div class="outlined-word">MAQUETTAGE</div>
+                <div class="rounded-rectangle">
+                    <div class="outlined-word">COMMUNICATION</div>
+                    <div class="outlined-word">ADOBE PHOTOSHOP</div>
+                    <div class="outlined-word">MONTAGE VIDÉO</div>
+                    <div class="outlined-word">RÉSEAUX SOCIAUX</div>
+                    <div class="outlined-word">RÉFÉRENCEMENT</div>
+                </div>
+
+                <div class="rounded-rectangle">
+                    <div class="outlined-word">DÉVELOPPEMENT</div>
+                    <div class="outlined-word">WORDPRESS</div>
+                    <div class="outlined-word">HTML / CSS</div>
+                    <div class="outlined-word">VISUAL STUDIO CODE</div>
+                    <div class="outlined-word">TAILWIND / BOOTSTRAP</div>
+                </div>
             </div>
-
-            <div class="rounded-rectangle">
-                <div class="outlined-word">COMMUNICATION</div>
-                <div class="outlined-word">ADOBE PHOTOSHOP</div>
-                <div class="outlined-word">MONTAGE VIDÉO</div>
-                <div class="outlined-word">RÉSEAUX SOCIAUX</div>
-                <div class="outlined-word">RÉFÉRENCEMENT</div>
-            </div>
-
-            <div class="rounded-rectangle">
-                <div class="outlined-word">DÉVELOPPEMENT</div>
-                <div class="outlined-word">WORDPRESS</div>
-                <div class="outlined-word">HTML / CSS</div>
-                <div class="outlined-word">VISUAL STUDIO CODE</div>
-                <div class="outlined-word">TAILWIND / BOOTSTRAP</div>
-            </div>
-
         </div>
-        </div>
-
     </div>
 </div>
 
