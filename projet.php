@@ -82,15 +82,14 @@ get_header(); ?>
     <div class="white-section ">
         <div class= "padding_project final_section ">
             <div class="flexed_concept">
-                    <div class="flexed-image-2_concept">
-                        <?php
-                        $image_concept = get_field('image_concept');
-                        if ($image_concept) {
-                            echo '<img src="' . esc_url($image_concept['url']) . '" alt="' . esc_attr($image_concept['alt']) . '">';
-                        }
-                        ?>
-
-                    </div>
+            <div class="flexed-image-2_concept appear-animation">
+                    <?php
+                    $image_concept = get_field('image_concept');
+                    if ($image_concept) {
+                        echo '<img src="' . esc_url($image_concept['url']) . '" alt="' . esc_attr($image_concept['alt']) . '" class="blur-image">';
+                    }
+                    ?>
+                </div>
                     <div class="flexed-text_project_concept">
                         <?php
                             $concept_title = get_field('concept_title');
@@ -172,15 +171,14 @@ get_header(); ?>
 
                     </div>
 
-                    <div class="flexed-image-2_concept max_height_picture">
+                    <div class="flexed-image-1_concept max_height_picture appear-animation">
                         <?php
                         // Get the value of 'image_square_2' custom field
                         $image_mockup = get_field('image_mockup');
                         if ($image_mockup) {
-                            echo '<img src="' . esc_url($image_mockup['url']) . '" alt="' . esc_attr($image_mockup['alt']) . '">';
+                            echo '<img src="' . esc_url($image_mockup['url']) . '" alt="' . esc_attr($image_mockup['alt']) . '" class="blur-image">';
                         }
                         ?>
-                        
                     </div>
             </div>
          </div>
@@ -239,9 +237,35 @@ get_header(); ?>
 <?php get_footer(); ?>
 
 <script>
+    let lastScrollPosition = 0; // Variable to store the last scroll position
+
     window.addEventListener('scroll', function() {
         const parallax = document.querySelector('.parallax-image');
         let scrollPosition = window.pageYOffset;
-        parallax.style.backgroundPositionY = scrollPosition * 0.1 + 'px'; // Adjust the multiplier to make the effect less strong
+
+        if (scrollPosition < lastScrollPosition) {
+            // Scrolling upwards
+            parallax.style.backgroundPositionY = '0'; // Reset the background position
+        } else {
+            // Scrolling downwards
+            parallax.style.backgroundPositionY = scrollPosition * 0.1 + 'px'; // Apply parallax effect
+        }
+
+        lastScrollPosition = scrollPosition; // Update the last scroll position
+    });
+</script>
+<script>
+    const imagesToAnimate = document.querySelectorAll('.appear-animation');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    });
+
+    imagesToAnimate.forEach(image => {
+        observer.observe(image);
     });
 </script>
